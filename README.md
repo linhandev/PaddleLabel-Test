@@ -2,7 +2,11 @@
 
 Test backend API: [insomnia](https://github.com/Kong/insomnia). Import Insomnia.yaml and goto debug on the top.
 
-Test project import / export: python test_task.py
+Test project import / export:
+1. change pplabel.config.task_test_basedir to where testing data is
+2. python test_task.py
+
+each import / export process is defined under pplabel.task.[task_name] (eg: classification/detection/segmentation)
 
 The testing data I use:
 
