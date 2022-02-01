@@ -1,0 +1,2682 @@
+_type: export
+__export_format: 4
+__export_date: 2022-02-01T03:25:27.255Z
+__export_source: insomnia.desktop.app:v2021.7.2
+resources:
+  - _id: req_0621ac56aa9e453eaa676fb841485056
+    parentId: wrk_507c3e7d8aaa4f04a4c68b209b2ed70a
+    modified: 1643682427378
+    created: 1643366629659
+    url: "{{ base_url }}/projects/:ProjectId"
+    name: 0 CamelCase
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_c55a2ccb75a64149849612d9d3915d2b
+        name: ProjectId
+        value: "1"
+        description: ""
+    headers: []
+    authentication: {}
+    metaSortKey: 0
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_507c3e7d8aaa4f04a4c68b209b2ed70a
+    parentId: null
+    modified: 1643212565479
+    created: 1643212565479
+    name: PP-Label api spec 0.1.0
+    description: ""
+    scope: design
+    _type: workspace
+  - _id: req_wrk_507c3e7d8aaa4f04a4c68b209b2ed70a2de3eb3a
+    parentId: fld_43f4285d1c73443b8070bd91297a014b
+    modified: 1643684153990
+    created: 1643212565472
+    url: "{{ base_url }}/projects"
+    name: 1 classification
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: >-
+        {
+        	"name": "Single Class Classification Example",
+          "data_dir": "/home/lin/Desktop/data/pplabel/single_clas_toy/PetImages/",
+          "description": "Example Project Descreption",
+          "label_dir": "",
+          "other_settings": "{'some_property':true}",
+          "task_category_id": 1,
+        	"labels": [
+        		{
+        			"id": 1,
+        			"name": "Cat"
+        		},
+        		{
+        			"id": 2,
+        			"name": "Dog"
+        		}
+        	]
+        }
+    parameters: []
+    headers:
+      - name: request_id
+        disabled: true
+        value: string
+        id: pair_a02b8ecbb9a2432c980cfe51be19a8fa
+      - name: Content-Type
+        value: application/json
+        id: pair_bee69f0a13cb4988a2aa588c51fdd797
+      - id: pair_6217ae9681b34c7c899b33ed2979a975
+        name: request_id
+        value: "123"
+        description: ""
+    authentication: {}
+    metaSortKey: 0
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_43f4285d1c73443b8070bd91297a014b
+    parentId: fld_e3ce88c402d04c1ea69f2ea66070e27d
+    modified: 1643682427389
+    created: 1643213347117
+    name: 1 Create Project
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: 0
+    _type: request_group
+  - _id: fld_e3ce88c402d04c1ea69f2ea66070e27d
+    parentId: wrk_507c3e7d8aaa4f04a4c68b209b2ed70a
+    modified: 1643682427378
+    created: 1643292725808
+    name: 1 Project
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: 100
+    _type: request_group
+  - _id: req_d9580a0adda34032b1073f46ffb5fe50
+    parentId: fld_43f4285d1c73443b8070bd91297a014b
+    modified: 1643682427416
+    created: 1643216146414
+    url: "{{ base_url }}/projects"
+    name: 6 duplicate name
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Classification Example",
+          "data_dir": "/home/lin/pplabel/project_dir/data 1",
+          "description": "Example Project Descreption",
+        	"labels": [
+        		{
+        			"id": 1,
+        			"name": "person"
+        		},
+        		{
+        			"id": 2,
+        			"name": "cat"
+        		}
+        	],
+        	"label_dir": "/home/lin/pplabel/project_dir/label 1",
+          "other_settings": "{'multiclass_classification':true}",
+          "task_category_id": 1
+        }
+    parameters: []
+    headers:
+      - name: request_id
+        disabled: true
+        value: string
+        id: pair_a02b8ecbb9a2432c980cfe51be19a8fa
+      - name: Content-Type
+        value: application/json
+        id: pair_bee69f0a13cb4988a2aa588c51fdd797
+    authentication: {}
+    metaSortKey: 700
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_a4a74001785944bd98dc5d76a80281d9
+    parentId: fld_43f4285d1c73443b8070bd91297a014b
+    modified: 1643682427415
+    created: 1643216172622
+    url: "{{ base_url }}/projects"
+    name: 4 duplicate data dir
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Classification Example 1",
+          "data_dir": "/home/lin/pplabel/project_dir/data",
+          "description": "Example Project Descreption",
+          "label_dir": "/home/lin/pplabel/project_dir/label 1",
+          "other_settings": "{'multiclass_classification':true}",
+          "task_category_id": 1,
+        	"labels": [
+        	{
+        		"id": 1,
+        		"name": "person"
+        	},
+        	{
+        		"id": 2,
+        		"name": "cat"
+        	}
+        ]
+        }
+    parameters: []
+    headers:
+      - name: request_id
+        disabled: true
+        value: string
+        id: pair_a02b8ecbb9a2432c980cfe51be19a8fa
+      - name: Content-Type
+        value: application/json
+        id: pair_bee69f0a13cb4988a2aa588c51fdd797
+    authentication: {}
+    metaSortKey: 400
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_32b57aa04f2a4b42abe403d27c393926
+    parentId: fld_43f4285d1c73443b8070bd91297a014b
+    modified: 1643682427416
+    created: 1643216204331
+    url: "{{ base_url }}/projects"
+    name: 5 duplicate label dir
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Classification Example 1",
+          "data_dir": "/home/lin/pplabel/project_dir/data 1",
+          "description": "Example Project Descreption",
+          "label_dir": "/home/lin/pplabel/project_dir/label",
+          "other_settings": "{'multiclass_classification':true}",
+          "task_category_id": 1,
+        	"labels": [
+        	{
+        		"id": 1,
+        		"name": "person"
+        	},
+        	{
+        		"id": 2,
+        		"name": "cat"
+        	}
+        ]
+        }
+    parameters: []
+    headers:
+      - name: request_id
+        disabled: true
+        value: string
+        id: pair_a02b8ecbb9a2432c980cfe51be19a8fa
+      - name: Content-Type
+        value: application/json
+        id: pair_bee69f0a13cb4988a2aa588c51fdd797
+    authentication: {}
+    metaSortKey: 500
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_1ccdce1c60dd49f3a95d056242ce6f61
+    parentId: fld_43f4285d1c73443b8070bd91297a014b
+    modified: 1643682427416
+    created: 1643216238481
+    url: "{{ base_url }}/projects"
+    name: 6 pass no data dir
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Classification Example",
+          "description": "Example Project Descreption",
+          "label_dir": "/home/lin/pplabel/project_dir/label",
+          "other_settings": "{'multiclass_classification':true}",
+          "task_category_id": 1,
+        	"labels": [
+        		{
+        			"id": 1,
+        			"name": "person"
+        		},
+        		{
+        			"id": 2,
+        			"name": "cat"
+        		}
+        	]
+        }
+    parameters: []
+    headers:
+      - name: request_id
+        disabled: true
+        value: string
+        id: pair_a02b8ecbb9a2432c980cfe51be19a8fa
+      - name: Content-Type
+        value: application/json
+        id: pair_bee69f0a13cb4988a2aa588c51fdd797
+    authentication: {}
+    metaSortKey: 800
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_fc6cbeaa870544f48de8a7f678d34d83
+    parentId: fld_43f4285d1c73443b8070bd91297a014b
+    modified: 1643682427416
+    created: 1643218847352
+    url: "{{ base_url }}/projects"
+    name: 7 pass no label dir
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Classification Example 2",
+          "data_dir": "/home/lin/pplabel/project_dir/data 2",
+          "description": "Example Project Descreption",
+          "other_settings": "{'multiclass_classification':true}",
+          "task_category_id": 1,
+        	"labels": [
+        		{
+        			"id": 1,
+        			"name": "person"
+        		},
+        		{
+        			"id": 2,
+        			"name": "cat"
+        		}
+        	]
+        }
+    parameters: []
+    headers:
+      - name: request_id
+        disabled: true
+        value: string
+        id: pair_a02b8ecbb9a2432c980cfe51be19a8fa
+      - name: Content-Type
+        value: application/json
+        id: pair_bee69f0a13cb4988a2aa588c51fdd797
+    authentication: {}
+    metaSortKey: 900
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_2161c3ca4a5a464dba94e47577995e26
+    parentId: fld_43f4285d1c73443b8070bd91297a014b
+    modified: 1643682427416
+    created: 1643218872627
+    url: "{{ base_url }}/projects"
+    name: 8 label dir none wont duplicate
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Classification Example 3",
+          "data_dir": "/home/lin/pplabel/project_dir/data 3",
+          "description": "Example Project Descreption",
+          "other_settings": "{'multiclass_classification':true}",
+          "task_category_id": 1,
+        	"labels": [
+        	{
+        		"id": 1,
+        		"name": "person"
+        	},
+        	{
+        		"id": 2,
+        		"name": "cat"
+        	}
+        ]
+        }
+    parameters: []
+    headers:
+      - name: request_id
+        disabled: true
+        value: string
+        id: pair_a02b8ecbb9a2432c980cfe51be19a8fa
+      - name: Content-Type
+        value: application/json
+        id: pair_bee69f0a13cb4988a2aa588c51fdd797
+    authentication: {}
+    metaSortKey: 1000
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_309c904e9f0348718738f3d890f042d5
+    parentId: fld_43f4285d1c73443b8070bd91297a014b
+    modified: 1643682427416
+    created: 1643219347325
+    url: "{{ base_url }}/projects"
+    name: 9 set read only modified time
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Classification Example",
+          "data_dir": "/home/lin/pplabel/project_dir/data",
+          "description": "Example Project Descreption",
+          "label_dir": "/home/lin/pplabel/project_dir/label",
+          "other_settings": "{'multiclass_classification':true}",
+          "task_category_id": 1,
+        	"modified": "2022-01-26T17:41:21.647761",
+        	"labels": [
+        	{
+        		"id": 1,
+        		"name": "person"
+        	},
+        	{
+        		"id": 2,
+        		"name": "cat"
+        	}
+        ]
+        }
+    parameters: []
+    headers:
+      - name: request_id
+        disabled: true
+        value: string
+        id: pair_a02b8ecbb9a2432c980cfe51be19a8fa
+      - name: Content-Type
+        value: application/json
+        id: pair_bee69f0a13cb4988a2aa588c51fdd797
+    authentication: {}
+    metaSortKey: 1100
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_321a079925054cd3a6743b0ea87d656a
+    parentId: fld_43f4285d1c73443b8070bd91297a014b
+    modified: 1643682427416
+    created: 1643285358450
+    url: "{{ base_url }}/projects"
+    name: 5 undefiend property
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Classification Example",
+          "data_dir": "/home/lin/pplabel/project_dir/data",
+          "description": "Example Project Descreption",
+          "label_dir": "/home/lin/pplabel/project_dir/label",
+          "other_settings": "{'multiclass_classification':true}",
+          "task_category": 1,
+        	"haha": "haha"
+        }
+    parameters: []
+    headers:
+      - name: request_id
+        disabled: true
+        value: string
+        id: pair_a02b8ecbb9a2432c980cfe51be19a8fa
+      - name: Content-Type
+        value: application/json
+        id: pair_bee69f0a13cb4988a2aa588c51fdd797
+    authentication: {}
+    metaSortKey: 600
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e738e17160044fd58329b03487d5f9b1
+    parentId: fld_43f4285d1c73443b8070bd91297a014b
+    modified: 1643682427415
+    created: 1643451029729
+    url: "{{ base_url }}/projects"
+    name: 2 detection
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Detection Example",
+          "data_dir": "/home/lin/pplabel/project_dir/detection",
+          "description": "Example Project Descreption",
+          "label_dir": "/home/lin/pplabel/project_dir/detection",
+          "other_settings": "{'some_property':true}",
+          "task_category_id": 2,
+        	"labels": [
+        		{
+        			"id": 1,
+        			"name": "person"
+        		},
+        		{
+        			"id": 2,
+        			"name": "cat"
+        		}
+        		
+        	]
+
+        }
+    parameters: []
+    headers:
+      - name: request_id
+        disabled: true
+        value: string
+        id: pair_a02b8ecbb9a2432c980cfe51be19a8fa
+      - name: Content-Type
+        value: application/json
+        id: pair_bee69f0a13cb4988a2aa588c51fdd797
+      - id: pair_6217ae9681b34c7c899b33ed2979a975
+        name: request_id
+        value: qwer
+        description: ""
+    authentication: {}
+    metaSortKey: 100
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_10577885513240a58429ac3e27185301
+    parentId: fld_43f4285d1c73443b8070bd91297a014b
+    modified: 1643682427415
+    created: 1643463507782
+    url: "{{ base_url }}/projects"
+    name: 3 dup label id
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Classification Example",
+          "data_dir": "/home/lin/pplabel/project_dir/data",
+          "description": "Example Project Descreption",
+          "label_dir": "/home/lin/pplabel/project_dir/label",
+          "other_settings": "{'some_property':true}",
+          "task_category_id": 1,
+        	"labels": [
+        		{
+        			"id": 1,
+        			"name": "person"
+        		},
+        		{
+        			"id": 1,
+        			"project_id": 1,
+        			"name": "cat"
+        		}
+        		
+        	]
+        }
+    parameters: []
+    headers:
+      - name: request_id
+        disabled: true
+        value: string
+        id: pair_a02b8ecbb9a2432c980cfe51be19a8fa
+      - name: Content-Type
+        value: application/json
+        id: pair_bee69f0a13cb4988a2aa588c51fdd797
+      - id: pair_6217ae9681b34c7c899b33ed2979a975
+        name: request_id
+        value: "123"
+        description: ""
+    authentication: {}
+    metaSortKey: 200
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_b37d0995bbbb45279b4c123d603e67ef
+    parentId: fld_43f4285d1c73443b8070bd91297a014b
+    modified: 1643682427415
+    created: 1643463553451
+    url: "{{ base_url }}/projects"
+    name: 4 dup label name
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Classification Example",
+          "data_dir": "/home/lin/pplabel/project_dir/data",
+          "description": "Example Project Descreption",
+          "label_dir": "/home/lin/pplabel/project_dir/label",
+          "other_settings": "{'some_property':true}",
+          "task_category_id": 1,
+        	"labels": [
+        		{
+        			"id": 1,
+        			"project_id": 1,
+        			"name": "person"
+        		},
+        		{
+        			"id": 2,
+        			"project_id": 1,
+        			"name": "person"
+        		}
+        		
+        	]
+        }
+    parameters: []
+    headers:
+      - name: request_id
+        disabled: true
+        value: string
+        id: pair_a02b8ecbb9a2432c980cfe51be19a8fa
+      - name: Content-Type
+        value: application/json
+        id: pair_bee69f0a13cb4988a2aa588c51fdd797
+      - id: pair_6217ae9681b34c7c899b33ed2979a975
+        name: request_id
+        value: "123"
+        description: ""
+    authentication: {}
+    metaSortKey: 300
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_wrk_507c3e7d8aaa4f04a4c68b209b2ed70a68b29b6a
+    parentId: fld_612fc02c00ed485a9b705934793a6681
+    modified: 1643682427419
+    created: 1643212565468
+    url: "{{ base_url }}/projects/:project_id"
+    name: delete pj and all task records
+    description: ""
+    method: DELETE
+    body: {}
+    parameters:
+      - id: pair_7093f2f2cfbb4900b89e4e02b2d8dc7c
+        name: project_id
+        value: "1"
+        description: ""
+        type: text
+        multiline: false
+    headers: []
+    authentication: {}
+    metaSortKey: 0
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_612fc02c00ed485a9b705934793a6681
+    parentId: fld_e3ce88c402d04c1ea69f2ea66070e27d
+    modified: 1643682427389
+    created: 1643219133409
+    name: 5 Delete Project
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: 400
+    _type: request_group
+  - _id: req_wrk_507c3e7d8aaa4f04a4c68b209b2ed70a590a5c8b
+    parentId: fld_a8c8cc3b31fc4ec8b4c8195d4779db0d
+    modified: 1643682427418
+    created: 1643212565466
+    url: "{{ base_url }}/projects/:project_id"
+    name: 1 Edit all project info
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "data_dir": "",
+          "description": "Changed Project Descreption",
+          "label_dir": "/home/lin/pplabel/new_project_dir/label",
+          "name": "Change All Info",
+          "other_settings": "{'multiclass_classification':true}"
+        }
+    parameters:
+      - id: pair_2226c51b202f4afcb3dbebf2a7a7cee1
+        name: project_id
+        value: "1"
+        description: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e7b362ca417d46e8bd47cff292b9b27e
+    authentication: {}
+    metaSortKey: 0
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_a8c8cc3b31fc4ec8b4c8195d4779db0d
+    parentId: fld_e3ce88c402d04c1ea69f2ea66070e27d
+    modified: 1643682427389
+    created: 1643219175113
+    name: 3 Edit Project
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: 200
+    _type: request_group
+  - _id: req_317a6b9e3de54987b9dd9f518131debf
+    parentId: fld_a8c8cc3b31fc4ec8b4c8195d4779db0d
+    modified: 1643682427418
+    created: 1643219538057
+    url: "{{ base_url }}/projects/:project_id"
+    name: 2 Edit immutable
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "data_dir": "/home/lin/pplabel/project_dir/data",
+          "description": "Example Project Descreption",
+          "label_dir": "/home/lin/pplabel/project_dir/label",
+          "name": "Change All Info",
+          "other_settings": "{'multiclass_classification':true}",
+          "task_category_id": 10
+        }
+    parameters:
+      - id: pair_2226c51b202f4afcb3dbebf2a7a7cee1
+        name: project_id
+        value: "1"
+        description: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e7b362ca417d46e8bd47cff292b9b27e
+    authentication: {}
+    metaSortKey: 100
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_7d2c0eebd1c241839947ca7288b83cf1
+    parentId: fld_a8c8cc3b31fc4ec8b4c8195d4779db0d
+    modified: 1643682427418
+    created: 1643285667110
+    url: "{{ base_url }}/projects/:project_id"
+    name: 3 Edit one property
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "data_dir": "/home/lin/pplabel/new_datadir"
+        }
+    parameters:
+      - id: pair_2226c51b202f4afcb3dbebf2a7a7cee1
+        name: project_id
+        value: "1"
+        description: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e7b362ca417d46e8bd47cff292b9b27e
+    authentication: {}
+    metaSortKey: 200
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_wrk_507c3e7d8aaa4f04a4c68b209b2ed70aa9cca752
+    parentId: fld_1ca73d2167ac46d5817a1bb73e187920
+    modified: 1643682427417
+    created: 1643212565470
+    url: "{{ base_url }}/projects/:project_id"
+    name: 2 get one
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_c55a2ccb75a64149849612d9d3915d2b
+        name: project_id
+        value: "1"
+        description: ""
+    headers: []
+    authentication: {}
+    metaSortKey: 100
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_1ca73d2167ac46d5817a1bb73e187920
+    parentId: fld_e3ce88c402d04c1ea69f2ea66070e27d
+    modified: 1643682427389
+    created: 1643292623959
+    name: 2 Get Project
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: 100
+    _type: request_group
+  - _id: req_wrk_507c3e7d8aaa4f04a4c68b209b2ed70a76ccfb84
+    parentId: fld_1ca73d2167ac46d5817a1bb73e187920
+    modified: 1643682427417
+    created: 1643212565473
+    url: "{{ base_url }}/projects"
+    name: 1 get all, sorted by modified
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: 0
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_cd3f04e801824138b87964303cd56baa
+    parentId: fld_ef400b00658a489c9cd5b50b5f5a8074
+    modified: 1643682427418
+    created: 1643456277187
+    url: "{{ base_url }}/projects/:project_id/tasks"
+    name: 2 Get all tasks
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_68aba020a11e4df18018a61127ece0e8
+        name: project_id
+        value: "1"
+        description: ""
+    headers: []
+    authentication: {}
+    metaSortKey: 100
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_ef400b00658a489c9cd5b50b5f5a8074
+    parentId: fld_e3ce88c402d04c1ea69f2ea66070e27d
+    modified: 1643682427389
+    created: 1643456259851
+    name: 4 Get project collections
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: 300
+    _type: request_group
+  - _id: req_7ede25258dce4f0f959ba749b1191ef5
+    parentId: fld_ef400b00658a489c9cd5b50b5f5a8074
+    modified: 1643682427418
+    created: 1643557494786
+    url: "{{ base_url }}/projects/:project_id/labels"
+    name: 3 Get all labels
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_68aba020a11e4df18018a61127ece0e8
+        name: project_id
+        value: "1"
+        description: ""
+    headers: []
+    authentication: {}
+    metaSortKey: 200
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_8bf645f9b4c34b658e3dbdea962b8b6d
+    parentId: fld_ef400b00658a489c9cd5b50b5f5a8074
+    modified: 1643682427418
+    created: 1643561297921
+    url: "{{ base_url }}/projects/:project_id/tasks"
+    name: 1 Get task stats
+    description: ""
+    method: HEAD
+    body: {}
+    parameters:
+      - id: pair_68aba020a11e4df18018a61127ece0e8
+        name: project_id
+        value: "1"
+        description: ""
+    headers: []
+    authentication: {}
+    metaSortKey: 0
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_160601cc3a734f08a8aa988b29c44eb0
+    parentId: fld_ef400b00658a489c9cd5b50b5f5a8074
+    modified: 1643682427418
+    created: 1643681010993
+    url: "{{ base_url }}/projects/:project_id/annotations"
+    name: 4 Get all annotations
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_68aba020a11e4df18018a61127ece0e8
+        name: project_id
+        value: "1"
+        description: ""
+    headers: []
+    authentication: {}
+    metaSortKey: 300
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6903923496a040998b06e289b72211e8
+    parentId: fld_ef400b00658a489c9cd5b50b5f5a8074
+    modified: 1643682839562
+    created: 1643682827630
+    url: "{{ base_url }}/projects/:project_id/tags"
+    name: 5 Get all tags
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_68aba020a11e4df18018a61127ece0e8
+        name: project_id
+        value: "1"
+        description: ""
+    headers: []
+    authentication: {}
+    metaSortKey: 350
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_wrk_507c3e7d8aaa4f04a4c68b209b2ed70a63396f69
+    parentId: fld_555e5023a08141bf8bd6239f48673667
+    modified: 1643682427421
+    created: 1643212565460
+    url: "{{ base_url }}/tasks"
+    name: Create a new task
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "project_id": 1,
+          "datas": ["data1.png"]
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_5d4b60bdc4a142d2884cc2802badc50c
+      - id: pair_1ef0c4c0f7b4408aa7739eb437570b62
+        name: request_id
+        value: asdfasdf
+        description: ""
+    authentication: {}
+    metaSortKey: 0
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_555e5023a08141bf8bd6239f48673667
+    parentId: fld_4cdb3b5af9044aaaaa887e1ce754854e
+    modified: 1643682427389
+    created: 1643284963302
+    name: 1 Create Task
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: 0
+    _type: request_group
+  - _id: fld_4cdb3b5af9044aaaaa887e1ce754854e
+    parentId: wrk_507c3e7d8aaa4f04a4c68b209b2ed70a
+    modified: 1643682427378
+    created: 1643292808117
+    name: 3 Task
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: 300
+    _type: request_group
+  - _id: req_wrk_507c3e7d8aaa4f04a4c68b209b2ed70ac54c6761
+    parentId: fld_8106a03b82584dc59460773178faff2a
+    modified: 1643682427421
+    created: 1643212565462
+    url: "{{ base_url }}/tasks"
+    name: 1 get all tasks
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: 0
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_8106a03b82584dc59460773178faff2a
+    parentId: fld_4cdb3b5af9044aaaaa887e1ce754854e
+    modified: 1643682427389
+    created: 1643293717160
+    name: 2 Get Task
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: 100
+    _type: request_group
+  - _id: req_63d983be012349929435d48eab10a571
+    parentId: fld_8106a03b82584dc59460773178faff2a
+    modified: 1643682427421
+    created: 1643293732544
+    url: "{{ base_url }}/tasks/:task_id"
+    name: 2 get one task
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_1266f4ff01874c0cbc08b675d7bc17d5
+        name: task_id
+        value: "1"
+        description: ""
+    headers: []
+    authentication: {}
+    metaSortKey: 100
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d89d2c76e2ce4902a7d9137dba00060d
+    parentId: fld_1e806cb52ddf46088d49b4643b60da3f
+    modified: 1643682427421
+    created: 1643343011251
+    url: "{{ base_url }}/tasks/:task_id"
+    name: delete task and all data and annotations
+    description: ""
+    method: DELETE
+    body: {}
+    parameters:
+      - id: pair_7093f2f2cfbb4900b89e4e02b2d8dc7c
+        name: task_id
+        value: "2"
+        description: ""
+        type: text
+        multiline: false
+    headers: []
+    authentication: {}
+    metaSortKey: 0
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_1e806cb52ddf46088d49b4643b60da3f
+    parentId: fld_4cdb3b5af9044aaaaa887e1ce754854e
+    modified: 1643682427389
+    created: 1643343024915
+    name: 4 Delete Task
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: 300
+    _type: request_group
+  - _id: req_8ed247c73a0b4e9faf57d8ae9230c09f
+    parentId: fld_0c70d369fe844abb8a50fe421a4d3b95
+    modified: 1643682427421
+    created: 1643343821085
+    url: "{{ base_url }}/projects/:project_id"
+    name: 1 Edit all task info
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"created": "2022-01-28T04:21:00.782721",
+        	"datas": ["new_data1.jpeg", "new_data2.webp"],
+        	"project": {
+        		"created": "2022-01-28T04:20:57.630952",
+        		"data_dir": "/home/lin/pplabel/project_dir/data",
+        		"description": "Example Project Descreption",
+        		"label_config": "['class1', 'class2', 'class3']",
+        		"label_dir": "/home/lin/pplabel/project_dir/label",
+        		"modified": "2022-01-28T04:20:57.630963",
+        		"name": "Classification Example",
+        		"other_settings": "{'multiclass_classification':true}",
+        		"project_id": 1,
+        		"task_category": 1
+        	},
+        	"project_id": 1,
+        	"task_id": 1
+        }
+    parameters:
+      - id: pair_2226c51b202f4afcb3dbebf2a7a7cee1
+        name: project_id
+        value: "1"
+        description: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e7b362ca417d46e8bd47cff292b9b27e
+    authentication: {}
+    metaSortKey: 0
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_0c70d369fe844abb8a50fe421a4d3b95
+    parentId: fld_4cdb3b5af9044aaaaa887e1ce754854e
+    modified: 1643682427389
+    created: 1643343821079
+    name: 3 Edit Task
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: 200
+    _type: request_group
+  - _id: req_002f2666c103481b848345a7dc49882a
+    parentId: fld_0c70d369fe844abb8a50fe421a4d3b95
+    modified: 1643682427421
+    created: 1643343821093
+    url: "{{ base_url }}/projects/:project_id"
+    name: 2 Edit all task info including modified
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"created": "2022-01-28T04:21:00.782721",
+        	"datas": ["new_data1.jpeg", "new_data2.webp"],
+        	"modified": "2022-01-28T04:21:00.782727",
+        	"project": {
+        		"created": "2022-01-28T04:20:57.630952",
+        		"data_dir": "/home/lin/pplabel/project_dir/data",
+        		"description": "Example Project Descreption",
+        		"label_config": "['class1', 'class2', 'class3']",
+        		"label_dir": "/home/lin/pplabel/project_dir/label",
+        		"modified": "2022-01-28T04:20:57.630963",
+        		"name": "Classification Example",
+        		"other_settings": "{'multiclass_classification':true}",
+        		"project_id": 1,
+        		"task_category": 1
+        	},
+        	"project_id": 1,
+        	"task_id": 1
+        }
+    parameters:
+      - id: pair_2226c51b202f4afcb3dbebf2a7a7cee1
+        name: project_id
+        value: "1"
+        description: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e7b362ca417d46e8bd47cff292b9b27e
+    authentication: {}
+    metaSortKey: 100
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_bfaf854acb1549f78925574a76691e81
+    parentId: fld_0c70d369fe844abb8a50fe421a4d3b95
+    modified: 1643682427421
+    created: 1643343821095
+    url: "{{ base_url }}/projects/:project_id"
+    name: 3 Edit one task property
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "data_dir": "/home/lin/pplabel/new_datadir"
+        }
+    parameters:
+      - id: pair_2226c51b202f4afcb3dbebf2a7a7cee1
+        name: project_id
+        value: "1"
+        description: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e7b362ca417d46e8bd47cff292b9b27e
+    authentication: {}
+    metaSortKey: 200
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_2b018368fede42b0ba09be59bff8df28
+    parentId: fld_ca9aa82be8b74d62bae1ba47adb8503a
+    modified: 1643682427422
+    created: 1643329876835
+    url: "{{ base_url }}/datas"
+    name: 1 get all datas
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: 0
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_ca9aa82be8b74d62bae1ba47adb8503a
+    parentId: fld_6ba60ed5213b4d3f9cc912511163c26e
+    modified: 1643682427390
+    created: 1643329860390
+    name: 2 Get Data
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: 100
+    _type: request_group
+  - _id: fld_6ba60ed5213b4d3f9cc912511163c26e
+    parentId: wrk_507c3e7d8aaa4f04a4c68b209b2ed70a
+    modified: 1643682427378
+    created: 1643329850179
+    name: 4 Data
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: 400
+    _type: request_group
+  - _id: req_deea7177599b45ff862a34368e9918cf
+    parentId: fld_e37a4f4d83654d6f97247bff5f3d96fb
+    modified: 1643682427422
+    created: 1643343298550
+    url: "{{ base_url }}/datas/"
+    name: Create a new data record
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "task_id": 1,
+          "path": "data1.png"
+        }	
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_5d4b60bdc4a142d2884cc2802badc50c
+      - id: pair_1ef0c4c0f7b4408aa7739eb437570b62
+        name: request_id
+        value: asdfasdf
+        description: ""
+    authentication: {}
+    metaSortKey: 0
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_e37a4f4d83654d6f97247bff5f3d96fb
+    parentId: fld_6ba60ed5213b4d3f9cc912511163c26e
+    modified: 1643682427390
+    created: 1643343308644
+    name: 1 Create Data
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: 0
+    _type: request_group
+  - _id: req_51b62034d6b64241903f20e7fb9ce51e
+    parentId: fld_1240d0af2bf143379d30589dd969a00e
+    modified: 1643682427419
+    created: 1643458198510
+    url: "{{ base_url }}/labels"
+    name: 1 Create a new label
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "project_id": 1,
+        	"id": 3,
+        	"name": "dog",
+        	"comment": "Label for preson"
+        }	
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_5d4b60bdc4a142d2884cc2802badc50c
+      - id: pair_1ef0c4c0f7b4408aa7739eb437570b62
+        name: request_id
+        value: asdfasdf
+        description: ""
+    authentication: {}
+    metaSortKey: 0
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_1240d0af2bf143379d30589dd969a00e
+    parentId: fld_7560e2bc496340578fbc0bded1d7e925
+    modified: 1643682427389
+    created: 1643458198504
+    name: 1 Create Label
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: 0
+    _type: request_group
+  - _id: fld_7560e2bc496340578fbc0bded1d7e925
+    parentId: wrk_507c3e7d8aaa4f04a4c68b209b2ed70a
+    modified: 1643682427378
+    created: 1643458198497
+    name: 2 Label
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: 200
+    _type: request_group
+  - _id: req_b231715919f2454088a3e483d52243e7
+    parentId: fld_1240d0af2bf143379d30589dd969a00e
+    modified: 1643682427419
+    created: 1643461444791
+    url: "{{ base_url }}/labels"
+    name: 3 Dup name
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "project_id": 1,
+        	"id": 4,
+        	"name": "person",
+        	"comment": "Label for preson"
+        }	
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_5d4b60bdc4a142d2884cc2802badc50c
+      - id: pair_1ef0c4c0f7b4408aa7739eb437570b62
+        name: request_id
+        value: asdfasdf
+        description: ""
+    authentication: {}
+    metaSortKey: 200
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_b19e81a806064411a29be5ae679be25e
+    parentId: fld_1240d0af2bf143379d30589dd969a00e
+    modified: 1643682427419
+    created: 1643463011504
+    url: "{{ base_url }}/labels"
+    name: 2 Dup id
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "project_id": 1,
+        	"id": 1,
+        	"name": "fish",
+        	"comment": "Label for preson"
+        }	
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_5d4b60bdc4a142d2884cc2802badc50c
+      - id: pair_1ef0c4c0f7b4408aa7739eb437570b62
+        name: request_id
+        value: asdfasdf
+        description: ""
+    authentication: {}
+    metaSortKey: 100
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e7e61d73e9574562a1a07db813938cca
+    parentId: fld_8e002783d5cc408f8893bcd1f4df1e4c
+    modified: 1643682427420
+    created: 1643458198520
+    url: "{{ base_url }}/labels"
+    name: 1 get all labels
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: 0
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_8e002783d5cc408f8893bcd1f4df1e4c
+    parentId: fld_7560e2bc496340578fbc0bded1d7e925
+    modified: 1643682427389
+    created: 1643458198519
+    name: 2 Get Labels
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: 100
+    _type: request_group
+  - _id: req_4dd22f0fb8754e1ea1bd4fd9f6692499
+    parentId: fld_8e002783d5cc408f8893bcd1f4df1e4c
+    modified: 1643682427420
+    created: 1643458198522
+    url: "{{ base_url }}/labels/:label_id"
+    name: 2 get one label
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_1266f4ff01874c0cbc08b675d7bc17d5
+        name: label_id
+        value: "1"
+        description: ""
+    headers: []
+    authentication: {}
+    metaSortKey: 100
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_a27b66b086b24c1ba0fbd21b92a1ffcc
+    parentId: fld_9ff952116f21486cbd66fa1109ffc6de
+    modified: 1643682427420
+    created: 1643458198524
+    url: "{{ base_url }}/labels/:label_id"
+    name: 1 delete label
+    description: ""
+    method: DELETE
+    body: {}
+    parameters:
+      - id: pair_7093f2f2cfbb4900b89e4e02b2d8dc7c
+        name: label_id
+        value: "1"
+        description: ""
+        type: text
+        multiline: false
+    headers: []
+    authentication: {}
+    metaSortKey: 0
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_9ff952116f21486cbd66fa1109ffc6de
+    parentId: fld_7560e2bc496340578fbc0bded1d7e925
+    modified: 1643682427389
+    created: 1643458198523
+    name: 4 Delete Label
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: 300
+    _type: request_group
+  - _id: req_476a9c1a73f6410e824374a9f8747ef3
+    parentId: fld_9ff952116f21486cbd66fa1109ffc6de
+    modified: 1643682427420
+    created: 1643558027737
+    url: "{{ base_url }}/labels/:label_id"
+    name: 2 cant delete label in use
+    description: ""
+    method: DELETE
+    body: {}
+    parameters:
+      - id: pair_7093f2f2cfbb4900b89e4e02b2d8dc7c
+        name: label_id
+        value: "1"
+        description: ""
+        type: text
+        multiline: false
+    headers: []
+    authentication: {}
+    metaSortKey: 100
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d1a64caa9d3c4acd9a825c42cfab05b3
+    parentId: fld_24a4401d8b434f5aae977a1627ab1853
+    modified: 1643682427420
+    created: 1643458198527
+    url: "{{ base_url }}/labels/:label_id"
+    name: 1 edit all info
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        	{
+        		"color": "newcolor",
+        		"comment": "annotation for a person",
+        		"id": 1,
+        		"name": "person"
+        	}
+    parameters:
+      - id: pair_2226c51b202f4afcb3dbebf2a7a7cee1
+        name: label_id
+        value: "1"
+        description: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e7b362ca417d46e8bd47cff292b9b27e
+    authentication: {}
+    metaSortKey: 0
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_24a4401d8b434f5aae977a1627ab1853
+    parentId: fld_7560e2bc496340578fbc0bded1d7e925
+    modified: 1643682427389
+    created: 1643458198526
+    name: 3 Edit Label
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: 200
+    _type: request_group
+  - _id: req_b2618b880bf74f0baba5e60d24d72846
+    parentId: fld_24a4401d8b434f5aae977a1627ab1853
+    modified: 1643682427420
+    created: 1643458198529
+    url: "{{ base_url }}/projects/:project_id"
+    name: 2 editing immutable
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        	{
+        		"color": "newcolor",
+        		"comment": null,
+        		"id": 1,
+        		"name": "person",
+        		"project_id": 3
+        	}
+    parameters:
+      - id: pair_2226c51b202f4afcb3dbebf2a7a7cee1
+        name: project_id
+        value: "1"
+        description: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e7b362ca417d46e8bd47cff292b9b27e
+    authentication: {}
+    metaSortKey: 100
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_c84edd29f7ce433c8201b173051b0b29
+    parentId: fld_24a4401d8b434f5aae977a1627ab1853
+    modified: 1643682427420
+    created: 1643458198531
+    url: "{{ base_url }}/labels/:label_id"
+    name: 3 edit one property
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "comment": "this is a new comment"
+        }
+    parameters:
+      - id: pair_2226c51b202f4afcb3dbebf2a7a7cee1
+        name: label_id
+        value: "1"
+        description: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e7b362ca417d46e8bd47cff292b9b27e
+    authentication: {}
+    metaSortKey: 200
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_eb7ad0e6983642179e85a635b601c963
+    parentId: fld_b7c15c13e2b94b659bc7d2632610e082
+    modified: 1643682427422
+    created: 1643458240543
+    url: "{{ base_url }}/annotations"
+    name: Create a new annotation
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "task_id": 1,
+        	"label_id": 1,
+        	"slice_id": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_5d4b60bdc4a142d2884cc2802badc50c
+      - id: pair_1ef0c4c0f7b4408aa7739eb437570b62
+        name: request_id
+        value: ""
+        description: ""
+    authentication: {}
+    metaSortKey: 0
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_b7c15c13e2b94b659bc7d2632610e082
+    parentId: fld_a4b5ea517bca4782a673246f7b8aa3a0
+    modified: 1643682427390
+    created: 1643458240538
+    name: 1 Create Annotation
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: 0
+    _type: request_group
+  - _id: fld_a4b5ea517bca4782a673246f7b8aa3a0
+    parentId: wrk_507c3e7d8aaa4f04a4c68b209b2ed70a
+    modified: 1643682427378
+    created: 1643458240530
+    name: 5 Annotation
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: 500
+    _type: request_group
+  - _id: req_5ca7790607ab4ff5802ec6cf73f6ff55
+    parentId: fld_0133330ef830412da0187f0e68b643f5
+    modified: 1643682427422
+    created: 1643458240552
+    url: "{{ base_url }}/annotations"
+    name: 1 get all annotations
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: 0
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_0133330ef830412da0187f0e68b643f5
+    parentId: fld_a4b5ea517bca4782a673246f7b8aa3a0
+    modified: 1643682427390
+    created: 1643458240550
+    name: 2 Get Annotation
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: 100
+    _type: request_group
+  - _id: req_9bdbda73ac8d403ab0d8326335f04287
+    parentId: fld_0133330ef830412da0187f0e68b643f5
+    modified: 1643682427422
+    created: 1643458240553
+    url: "{{ base_url }}/annotations/:annotation_id"
+    name: 2 get one annotation
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_1266f4ff01874c0cbc08b675d7bc17d5
+        name: annotation_id
+        value: "1"
+        description: ""
+    headers: []
+    authentication: {}
+    metaSortKey: 100
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_74fc4abdad8f4a19bd8a207657187fc5
+    parentId: fld_6d35947c2d5b44f38c7496894b93d41e
+    modified: 1643682427426
+    created: 1643458240556
+    url: "{{ base_url }}/annotations/:annotation_id"
+    name: delete one
+    description: ""
+    method: DELETE
+    body: {}
+    parameters:
+      - id: pair_7093f2f2cfbb4900b89e4e02b2d8dc7c
+        name: annotation_id
+        value: "1"
+        description: ""
+        type: text
+        multiline: false
+    headers: []
+    authentication: {}
+    metaSortKey: 0
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_6d35947c2d5b44f38c7496894b93d41e
+    parentId: fld_a4b5ea517bca4782a673246f7b8aa3a0
+    modified: 1643682427390
+    created: 1643458240555
+    name: 4 Delete Annotation
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: 300
+    _type: request_group
+  - _id: req_c70870e9d7ee4c7885640613b27e4cd5
+    parentId: fld_9cfc077b95bc420aa8d813aed431503f
+    modified: 1643682427425
+    created: 1643458240559
+    url: "{{ base_url }}/annotations/:annotation_id"
+    name: 1 Edit all info
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        	{
+        		"label_id": 2,
+        		"result": null
+        	}
+    parameters:
+      - id: pair_2226c51b202f4afcb3dbebf2a7a7cee1
+        name: annotation_id
+        value: "1"
+        description: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e7b362ca417d46e8bd47cff292b9b27e
+    authentication: {}
+    metaSortKey: 0
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_9cfc077b95bc420aa8d813aed431503f
+    parentId: fld_a4b5ea517bca4782a673246f7b8aa3a0
+    modified: 1643682427390
+    created: 1643458240558
+    name: 3 Edit Annotation
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: 200
+    _type: request_group
+  - _id: req_4cd5b0d9211f4fada4ae9bc35572550e
+    parentId: fld_9cfc077b95bc420aa8d813aed431503f
+    modified: 1643682427425
+    created: 1643458240561
+    url: "{{ base_url }}/annotations/:annotation_id"
+    name: 2 Edit all including immutable
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        	{
+        		"label_id": 1,
+        		"result": null,
+        		"task_id": 1
+        	}
+    parameters:
+      - id: pair_2226c51b202f4afcb3dbebf2a7a7cee1
+        name: annotation_id
+        value: "1"
+        description: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e7b362ca417d46e8bd47cff292b9b27e
+    authentication: {}
+    metaSortKey: 100
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_7d0e0d44dd994bfeb8a488cc50e02e64
+    parentId: fld_9cfc077b95bc420aa8d813aed431503f
+    modified: 1643682427425
+    created: 1643458240562
+    url: "{{ base_url }}/annotations/:annotation_id"
+    name: 3 Edit one task property
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "label_id": 1
+        }
+    parameters:
+      - id: pair_2226c51b202f4afcb3dbebf2a7a7cee1
+        name: annotation_id
+        value: "1"
+        description: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e7b362ca417d46e8bd47cff292b9b27e
+    authentication: {}
+    metaSortKey: 200
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ba5375700f3f47f99bfdce98c88035af
+    parentId: fld_457a816883cb4598bfc3f3279ef6053b
+    modified: 1643684318060
+    created: 1643682423547
+    url: "{{ base_url }}/tags"
+    name: 1 Create a new tag
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "project_id": 1,
+        	"name": "finished",
+        	"comment": "This task is finished"
+        }	
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_5d4b60bdc4a142d2884cc2802badc50c
+      - id: pair_1ef0c4c0f7b4408aa7739eb437570b62
+        name: request_id
+        value: asdfasdf
+        description: ""
+    authentication: {}
+    metaSortKey: 0
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_457a816883cb4598bfc3f3279ef6053b
+    parentId: fld_55e2083613664be09c9a908a5663fbf5
+    modified: 1643682438301
+    created: 1643682423543
+    name: 1 Create Tag
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: 0
+    _type: request_group
+  - _id: fld_55e2083613664be09c9a908a5663fbf5
+    parentId: wrk_507c3e7d8aaa4f04a4c68b209b2ed70a
+    modified: 1643682427378
+    created: 1643682423538
+    name: 6 Tag
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: 600
+    _type: request_group
+  - _id: req_9934f21a434b4a1eab4b8c9275a573f6
+    parentId: fld_457a816883cb4598bfc3f3279ef6053b
+    modified: 1643684252991
+    created: 1643682423552
+    url: "{{ base_url }}/tags"
+    name: 2 Dup name
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "project_id": 1,
+        	"name": "finished",
+        	"comment": "This task is finished"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_5d4b60bdc4a142d2884cc2802badc50c
+      - id: pair_1ef0c4c0f7b4408aa7739eb437570b62
+        name: request_id
+        value: "123123"
+        description: ""
+    authentication: {}
+    metaSortKey: 200
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_c8752c914f90451381620417cc895aa3
+    parentId: fld_19d8984474fd4e9c91275b1452b655ea
+    modified: 1643684268334
+    created: 1643682423558
+    url: "{{ base_url }}/tags"
+    name: 1 get all tags
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: 0
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_19d8984474fd4e9c91275b1452b655ea
+    parentId: fld_55e2083613664be09c9a908a5663fbf5
+    modified: 1643682427390
+    created: 1643682423556
+    name: 2 Get Labels
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: 100
+    _type: request_group
+  - _id: req_fb3ffa4e7d3841a4990137e5cb8305aa
+    parentId: fld_19d8984474fd4e9c91275b1452b655ea
+    modified: 1643684304614
+    created: 1643682423559
+    url: "{{ base_url }}/tags/:tag_id"
+    name: 2 get one tag
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_1266f4ff01874c0cbc08b675d7bc17d5
+        name: tag_id
+        value: "1"
+        description: ""
+    headers: []
+    authentication: {}
+    metaSortKey: 100
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_567b14621d25441490981dcb7dd2a013
+    parentId: fld_e8c840a4aa0042ab998634e958bb2514
+    modified: 1643684472765
+    created: 1643682423563
+    url: "{{ base_url }}/tags/:tag_id"
+    name: 1 delete label
+    description: ""
+    method: DELETE
+    body: {}
+    parameters:
+      - id: pair_7093f2f2cfbb4900b89e4e02b2d8dc7c
+        name: tag_id
+        value: "1"
+        description: ""
+        type: text
+        multiline: false
+    headers: []
+    authentication: {}
+    metaSortKey: 0
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_e8c840a4aa0042ab998634e958bb2514
+    parentId: fld_55e2083613664be09c9a908a5663fbf5
+    modified: 1643684462582
+    created: 1643682423562
+    name: 4 Delete Tag
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: 300
+    _type: request_group
+  - _id: req_2a737d1d2d1d46c79f67af50925145ee
+    parentId: fld_b42eba6b2a9c4651bd282e7ee1d1913f
+    modified: 1643684413898
+    created: 1643682423570
+    url: "{{ base_url }}/tags/:tag_id"
+    name: 1 edit all info
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "pending check",
+        	"comment": "This task is finished and pending check"
+        }	
+    parameters:
+      - id: pair_2226c51b202f4afcb3dbebf2a7a7cee1
+        name: tag_id
+        value: "1"
+        description: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e7b362ca417d46e8bd47cff292b9b27e
+    authentication: {}
+    metaSortKey: 0
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_b42eba6b2a9c4651bd282e7ee1d1913f
+    parentId: fld_55e2083613664be09c9a908a5663fbf5
+    modified: 1643684313087
+    created: 1643682423569
+    name: 3 Edit Tag
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: 200
+    _type: request_group
+  - _id: req_675ed1200d044f53a473f0564124e035
+    parentId: fld_b42eba6b2a9c4651bd282e7ee1d1913f
+    modified: 1643684433512
+    created: 1643682423572
+    url: "{{ base_url }}/tags/:tag_id"
+    name: 2 editing immutable
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"project_id": 2,
+        	"name": "pending check",
+        	"comment": "This task is finished and pending check"
+        }	
+    parameters:
+      - id: pair_2226c51b202f4afcb3dbebf2a7a7cee1
+        name: tag_id
+        value: "1"
+        description: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e7b362ca417d46e8bd47cff292b9b27e
+    authentication: {}
+    metaSortKey: 100
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_64c144cd02d44805b0119629a3ab55e9
+    parentId: fld_b42eba6b2a9c4651bd282e7ee1d1913f
+    modified: 1643684454149
+    created: 1643682423574
+    url: "{{ base_url }}/tags/:tag_id"
+    name: 3 edit one property
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "comment": "this is a new comment"
+        }
+    parameters:
+      - id: pair_2226c51b202f4afcb3dbebf2a7a7cee1
+        name: tag_id
+        value: "1"
+        description: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_e7b362ca417d46e8bd47cff292b9b27e
+    authentication: {}
+    metaSortKey: 200
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_0708fec005c0a2e197345e3cce62eac13f2cacba
+    parentId: wrk_507c3e7d8aaa4f04a4c68b209b2ed70a
+    modified: 1643215985535
+    created: 1643212565475
+    name: Base environment
+    data:
+      base_url: "{{ scheme }}://{{ host }}{{ base_path }}"
+    dataPropertyOrder:
+      "&":
+        - base_url
+    color: null
+    isPrivate: false
+    metaSortKey: 1643212565475
+    _type: environment
+  - _id: jar_0708fec005c0a2e197345e3cce62eac13f2cacba
+    parentId: wrk_507c3e7d8aaa4f04a4c68b209b2ed70a
+    modified: 1643684253596
+    created: 1643212573002
+    name: Default Jar
+    cookies:
+      - key: session
+        value: .eJyrVipKLSxNLS6Jz0wpVrKKrlZSKAFShmYmxmYWJkamhnrmxgZGpsZGOkqJxSlpIKwUW6uDrsxYz9TC0szYUEfJ0MgYiIBqYmsB0ksY4w.YfihnQ.U3nQPz6BMFeoMvNmhsixVfVfJjk
+        domain: localhost
+        path: /
+        httpOnly: true
+        hostOnly: true
+        creation: 2022-01-27T12:21:37.790Z
+        lastAccessed: 2022-02-01T02:57:33.596Z
+        id: "3573695442744149"
+    _type: cookie_jar
+  - _id: spc_c04d755fec2c4dc58f7d624fdcd57f25
+    parentId: wrk_507c3e7d8aaa4f04a4c68b209b2ed70a
+    modified: 1643359282403
+    created: 1643212565481
+    fileName: PP-Label api spec 0.1.0
+    contents: >
+      openapi: 3.0.0
+
+      info:
+        title: PP-Label api spec
+        version: 0.1.0
+        description: ''
+      servers:
+        - url: 'http://localhost:5000/api'
+          description: Local server
+      paths:
+        /projects:
+          get:
+            tags:
+              - Project
+            summary: 'Read all projects, sort by last modify date'
+            responses:
+              '200':
+                description: success
+                content:
+                  application/json:
+                    schema:
+                      $ref: '#/components/schemas/Projects'
+          post:
+            tags:
+              - Project
+            summary: Create a new project
+            requestBody:
+              required: true
+              content:
+                application/json:
+                  schema:
+                    $ref: '#/components/schemas/Project'
+                  examples:
+                    Classfication Example:
+                      value:
+                        name: Classification Example
+                        description: Example Project Descreption
+                        task_category: 1
+                        data_dir: ~/pplabel/project_dir/data
+                        label_dir: ~/pplabel/project_dir/label
+                        label_config: '[''class1'', ''class2'', ''class3'']'
+                        other_settings: '{''multiclass_classification'':true}'
+            responses:
+              '201':
+                description: success
+                content:
+                  application/json:
+                    schema:
+                      $ref: '#/components/schemas/Project'
+                    examples:
+                      example-1:
+                        value:
+                          project_id: 0
+                          name: Example Project
+                          description: Example Descreption
+                          task_category: 1
+                          data_dir: ~/pplabel/project_dir/data
+                          label_dir: ~/pplabel/project_dir/label
+                          label_config: string
+                          created: string
+                          modified: string
+                          other_settings: string
+            parameters:
+              - schema:
+                  type: string
+                in: header
+                name: request_id
+                description: 'Assign a unique random value each run, server will reject requests with duplicate request_id within several seconds. Prevent critical operations from running multiple times'
+        '/projects/{project_id}':
+          get:
+            tags:
+              - Project
+            summary: Get info of a specific project
+            parameters:
+              - name: project_id
+                in: path
+                description: Id of the project
+                schema:
+                  type: integer
+                required: true
+            responses:
+              '200':
+                description: OK
+              '404':
+                description: Project not fond
+          delete:
+            summary: Delete a project record and ALL TASKS RECORDS under the project.
+            description: Delete a project record and ALL TASKS RECORDS under the project. Won't delete file on file system
+            tags:
+              - Project
+            parameters:
+              - name: project_id
+                in: path
+                description: Id of the project to delete
+                schema:
+                  type: integer
+                required: true
+            responses:
+              '200':
+                description: OK
+              '404':
+                description: The task specified is not found
+          put:
+            tags:
+              - Project
+            summary: Edit project info
+            description: Edit project info. Provide key value pair to change one value only. Provide all changed values to change multiple. Empty string will be set. Leave values don't intend to change out of request body.
+            parameters:
+              - name: project_id
+                in: path
+                description: Id of the project to edit
+                schema:
+                  type: integer
+                required: true
+            requestBody:
+              required: true
+              content:
+                application/json:
+                  schema:
+                    anyOf:
+                      - $ref: '#/components/schemas/Project'
+                      - $ref: '#/components/schemas/KeyValuePair'
+                  examples:
+                    Full Project:
+                      value:
+                        name: Change All Info
+                        description: Example Project Descreption
+                        task_category: 1
+                        data_dir: ~/pplabel/project_dir/data
+                        label_dir: ~/pplabel/project_dir/label
+                        label_config: '[''class1'', ''class2'', ''class3'']'
+                        other_settings: '{''multiclass_classification'':true}'
+                    One Property:
+                      value:
+                        name: Change Only Project Name
+            responses:
+              '200':
+                description: success
+              '404':
+                description: 'project with project id not fond, or project don''t have requested property'
+        /tasks:
+          get:
+            tags:
+              - Task
+            summary: 'Get all tasks, sort by last modified'
+            responses:
+              '200':
+                description: success
+                content:
+                  application/json:
+                    schema:
+                      $ref: '#/components/schemas/Projects'
+          post:
+            tags:
+              - Task
+            summary: Create a new task
+            requestBody:
+              required: true
+              content:
+                application/json:
+                  schema:
+                    $ref: '#/components/schemas/Task'
+                  examples:
+                    Task Example:
+                      value:
+                        project_id: 1
+                        data_paths:
+                          - image.png
+                        label_paths:
+                          - image_png.xml
+                        slice_count: 1
+            responses:
+              '201':
+                description: success
+                content:
+                  application/json:
+                    schema:
+                      $ref: '#/components/schemas/Task'
+                    examples:
+                      example-1:
+                        value:
+                          project_id: 0
+                          data_paths:
+                            - image.png
+                          label_paths:
+                            - image_png.xml
+                          slice_count: 1
+      components:
+        schemas:
+          Project:
+            type: object
+            description: Contains project details and settings
+            x-examples:
+              Classification_Example:
+                project_id: null
+                name: Classification Example
+                description: Example Project Descreption
+                task_category: 1
+                data_dir: ~/pplabel/project_name/data
+                label_dir: ~/pplabel/project_name/label
+                label_config: '[''class1'', ''class2'', ''class3'']'
+                created: null
+                modified: null
+                other_settings: '{''multiclass_classification'':true}'
+            properties:
+              project_id:
+                type: integer
+                nullable: true
+                readOnly: true
+              name:
+                type: string
+                maxLength: 64
+                description: Project name
+              description:
+                type: string
+                description: Optional project description
+                nullable: true
+              task_category:
+                type: integer
+                maximum: 64
+                description: 'Top level annotation task category, see TODO for int <-> category map'
+              data_dir:
+                type: string
+                description: Absolute directory path where all the data file is stored
+              label_dir:
+                type: string
+                description: Absolute directory path where all the label files are stored
+              label_config:
+                type: string
+                description: Label configuration. Varies across different task categories
+              created:
+                type: string
+                description: Project creation timestamp in UTC
+                format: timestamp
+                nullable: true
+                readOnly: true
+              modified:
+                type: string
+                description: Last time the project detail or ANY TASK of the project is modified
+                format: timestamp
+                nullable: true
+                readOnly: true
+              other_settings:
+                type: string
+                description: Project settings that are different across annotation task categories
+            required:
+              - name
+              - task_category
+              - data_dir
+          Projects:
+            type: array
+            items:
+              type: object
+              properties:
+                project_id:
+                  type: integer
+                  description: Id of the person
+                  nullable: true
+                name:
+                  type: string
+                  maxLength: 32
+                '':
+                  type: string
+          Task:
+            title: Task
+            type: object
+            description: 'An annotation task, groups data and label together'
+            properties:
+              task_id:
+                type: integer
+                readOnly: true
+              project_id:
+                type: integer
+              data_path:
+                type: string
+              slice_count:
+                type: integer
+              created:
+                type: string
+                format: timestamp
+                readOnly: true
+              modified:
+                type: string
+                format: timestamp
+                readOnly: true
+            required:
+              - project_id
+          Annotation:
+            title: Annotation
+            type: object
+            properties:
+              annotation_id:
+                type: integer
+                nullable: true
+              created:
+                type: string
+              modified:
+                type: string
+              type:
+                type: string
+              json:
+                type: string
+          KeyValuePair:
+            description: A key-value pair
+    contentType: yaml
+    _type: api_spec
+  - _id: uts_e4d230b946e34297b4cf2891946ba771
+    parentId: wrk_507c3e7d8aaa4f04a4c68b209b2ed70a
+    modified: 1643365638873
+    created: 1643365638873
+    name: Test Project
+    _type: unit_test_suite
+  - _id: env_env_0708fec005c0a2e197345e3cce62eac13f2cacba_sub
+    parentId: env_0708fec005c0a2e197345e3cce62eac13f2cacba
+    modified: 1643215986613
+    created: 1643212565476
+    name: OpenAPI env
+    data:
+      scheme: http
+      base_path: /api
+      host: localhost:5000
+    dataPropertyOrder:
+      "&":
+        - scheme
+        - base_path
+        - host
+    color: null
+    isPrivate: false
+    metaSortKey: 1643212565476
+    _type: environment
+  - _id: ut_699e4b8ce39940e8992f6d0fbcb9ca13
+    parentId: uts_e4d230b946e34297b4cf2891946ba771
+    modified: 1643366142654
+    created: 1643365653719
+    requestId: req_wrk_507c3e7d8aaa4f04a4c68b209b2ed70a2de3eb3a
+    name: 1 create pj
+    code: |-
+      const response1 = await insomnia.send();
+      expect(response1.status).to.equal(201);
+      res = `{
+      	"created": "2022-01-28T10:24:50.378962",
+      	"data_dir": "/home/lin/pplabel/project_dir/data",
+      	"description": "Example Project Descreption",
+      	"label_config": "['class1', 'class2', 'class3']",
+      	"label_dir": "/home/lin/pplabel/project_dir/label",
+      	"modified": "2022-01-28T10:24:50.378968",
+      	"name": "Classification Example",
+      	"other_settings": "{'multiclass_classification':true}",
+      	"project_id": 1,
+      	"task_category": 1
+      }`
+      expect(response1.body == res)
+    _type: unit_test
+  - _id: ut_43a5fee785704796af64b87e3c7d623d
+    parentId: uts_e4d230b946e34297b4cf2891946ba771
+    modified: 1643366296193
+    created: 1643366151765
+    requestId: req_wrk_507c3e7d8aaa4f04a4c68b209b2ed70a2de3eb3a
+    name: 2 create dup pj
+    code: |-
+      const response1 = await insomnia.send();
+      expect(response1.status).to.equal(409);
+    _type: unit_test
