@@ -1,0 +1,34 @@
+_id: req_317a6b9e3de54987b9dd9f518131debf
+type: Request
+parentId: fld_a8c8cc3b31fc4ec8b4c8195d4779db0d
+modified: 1644438772504
+created: 1643219538057
+url: "{{ base_url }}/projects/{% pathParam 'project_id', '1', '', true %}"
+name: 2 Edit immutable
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "data_dir": "/home/lin/pplabel/project_dir/data",
+      "description": "Example Project Descreption",
+      "label_dir": "/home/lin/pplabel/project_dir/label",
+      "name": "Change All Info",
+      "other_settings": "{'multiclass_classification':true}",
+      "task_category_id": 10
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_e7b362ca417d46e8bd47cff292b9b27e
+authentication: {}
+metaSortKey: 100
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

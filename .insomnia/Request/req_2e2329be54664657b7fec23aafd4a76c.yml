@@ -1,0 +1,27 @@
+_id: req_2e2329be54664657b7fec23aafd4a76c
+type: Request
+parentId: fld_47223a1bc3fd43d0a3b2762fa4c8dfde
+modified: 1644436038515
+created: 1644436034158
+url: "{{ base_url }}/labels/:label_id"
+name: 2 cant delete label in use
+description: ""
+method: DELETE
+body: {}
+parameters:
+  - id: pair_7093f2f2cfbb4900b89e4e02b2d8dc7c
+    name: label_id
+    value: "1"
+    description: ""
+    type: text
+    multiline: false
+headers: []
+authentication: {}
+metaSortKey: 100
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

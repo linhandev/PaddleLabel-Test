@@ -1,0 +1,27 @@
+_id: req_wrk_507c3e7d8aaa4f04a4c68b209b2ed70a68b29b6a
+type: Request
+parentId: fld_612fc02c00ed485a9b705934793a6681
+modified: 1644436038485
+created: 1643212565468
+url: "{{ base_url }}/projects/{{ project_id }}"
+name: delete pj and all task records
+description: ""
+method: DELETE
+body: {}
+parameters:
+  - id: pair_7093f2f2cfbb4900b89e4e02b2d8dc7c
+    name: project_id
+    value: "1"
+    description: ""
+    type: text
+    multiline: false
+headers: []
+authentication: {}
+metaSortKey: 0
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

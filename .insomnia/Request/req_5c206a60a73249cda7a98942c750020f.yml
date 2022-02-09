@@ -1,0 +1,21 @@
+_id: req_5c206a60a73249cda7a98942c750020f
+type: Request
+parentId: fld_57d09ac129454d3ab3a1161fb91bab7c
+modified: 1644436038512
+created: 1643696673508
+url: "{{ base_url }}/datas"
+name: 1 get all datas
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: 0
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

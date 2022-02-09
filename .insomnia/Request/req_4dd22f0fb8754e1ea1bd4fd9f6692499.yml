@@ -1,0 +1,25 @@
+_id: req_4dd22f0fb8754e1ea1bd4fd9f6692499
+type: Request
+parentId: fld_8e002783d5cc408f8893bcd1f4df1e4c
+modified: 1644436038506
+created: 1643458198522
+url: "{{ base_url }}/labels/:label_id"
+name: 2 get one label
+description: ""
+method: GET
+body: {}
+parameters:
+  - id: pair_1266f4ff01874c0cbc08b675d7bc17d5
+    name: label_id
+    value: "1"
+    description: ""
+headers: []
+authentication: {}
+metaSortKey: 100
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

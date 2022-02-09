@@ -1,0 +1,36 @@
+_id: req_51b62034d6b64241903f20e7fb9ce51e
+type: Request
+parentId: fld_1240d0af2bf143379d30589dd969a00e
+modified: 1644436038506
+created: 1643458198510
+url: "{{ base_url }}/labels"
+name: 1 Create a new label
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "project_id": 1,
+    	"id": 3,
+    	"name": "dog",
+    	"comment": "Label for preson"
+    }	
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_5d4b60bdc4a142d2884cc2802badc50c
+  - id: pair_1ef0c4c0f7b4408aa7739eb437570b62
+    name: request_id
+    value: asdfasdf
+    description: ""
+authentication: {}
+metaSortKey: 0
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,25 @@
+_id: req_cd3f04e801824138b87964303cd56baa
+type: Request
+parentId: fld_ef400b00658a489c9cd5b50b5f5a8074
+modified: 1644436038485
+created: 1643456277187
+url: "{{ base_url }}/projects/:project_id/tasks"
+name: 2 Get all tasks
+description: ""
+method: GET
+body: {}
+parameters:
+  - id: pair_68aba020a11e4df18018a61127ece0e8
+    name: project_id
+    value: "1"
+    description: ""
+headers: []
+authentication: {}
+metaSortKey: 100
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

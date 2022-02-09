@@ -1,0 +1,25 @@
+_id: req_b8a35a464e5445408c6e0648ad6aa9e1
+type: Request
+parentId: fld_178f013fcc3b4b97ab147c54b326d318
+modified: 1644436038509
+created: 1643688323260
+url: "{{ base_url }}/tasks/:task_id/tags"
+name: 1 get tags under a task
+description: ""
+method: GET
+body: {}
+parameters:
+  - id: pair_5d772d36825e4a96895738e9a9c8b298
+    name: task_id
+    value: "1"
+    description: ""
+headers: []
+authentication: {}
+metaSortKey: 0
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

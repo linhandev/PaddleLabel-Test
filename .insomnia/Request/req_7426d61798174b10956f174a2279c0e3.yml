@@ -1,0 +1,25 @@
+_id: req_7426d61798174b10956f174a2279c0e3
+type: Request
+parentId: fld_770017c757b84ab4b3dc65d6caa31ccc
+modified: 1644438353256
+created: 1644436034154
+url: "{{ base_url }}/users/:user_id"
+name: 2 get one user
+description: ""
+method: GET
+body: {}
+parameters:
+  - id: pair_1266f4ff01874c0cbc08b675d7bc17d5
+    name: user_id
+    value: "1"
+    description: ""
+headers: []
+authentication: {}
+metaSortKey: 100
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

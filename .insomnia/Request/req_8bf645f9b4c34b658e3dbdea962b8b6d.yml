@@ -1,0 +1,25 @@
+_id: req_8bf645f9b4c34b658e3dbdea962b8b6d
+type: Request
+parentId: fld_ef400b00658a489c9cd5b50b5f5a8074
+modified: 1644436038485
+created: 1643561297921
+url: "{{ base_url }}/projects/:project_id/tasks"
+name: 1 Get task stats
+description: ""
+method: HEAD
+body: {}
+parameters:
+  - id: pair_68aba020a11e4df18018a61127ece0e8
+    name: project_id
+    value: "1"
+    description: ""
+headers: []
+authentication: {}
+metaSortKey: 0
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

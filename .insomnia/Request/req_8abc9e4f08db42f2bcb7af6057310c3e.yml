@@ -1,0 +1,35 @@
+_id: req_8abc9e4f08db42f2bcb7af6057310c3e
+type: Request
+parentId: fld_ffe5df61d5764ffe914c6da541bd1c8f
+modified: 1644436038512
+created: 1643696673518
+url: "{{ base_url }}/tags/:tag_id"
+name: 2 editing immutable
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"project_id": 2,
+    	"name": "pending check",
+    	"comment": "This task is finished and pending check"
+    }	
+parameters:
+  - id: pair_2226c51b202f4afcb3dbebf2a7a7cee1
+    name: tag_id
+    value: "1"
+    description: ""
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_e7b362ca417d46e8bd47cff292b9b27e
+authentication: {}
+metaSortKey: 100
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

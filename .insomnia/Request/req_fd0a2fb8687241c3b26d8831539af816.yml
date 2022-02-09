@@ -1,0 +1,37 @@
+_id: req_fd0a2fb8687241c3b26d8831539af816
+type: Request
+parentId: fld_178f013fcc3b4b97ab147c54b326d318
+modified: 1644436038509
+created: 1643690854985
+url: "{{ base_url }}/tasks/:task_id/tags"
+name: 3 add non-existing tag
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "tag_id": 4
+    }
+parameters:
+  - id: pair_d666326fc549493d8f487a5f17d51277
+    name: task_id
+    value: "1"
+    description: ""
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_5d4b60bdc4a142d2884cc2802badc50c
+  - id: pair_1ef0c4c0f7b4408aa7739eb437570b62
+    name: request_id
+    value: kljasdfklnlkj
+    description: ""
+authentication: {}
+metaSortKey: 200
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

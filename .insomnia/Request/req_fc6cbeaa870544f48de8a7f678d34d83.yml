@@ -1,0 +1,47 @@
+_id: req_fc6cbeaa870544f48de8a7f678d34d83
+type: Request
+parentId: fld_43f4285d1c73443b8070bd91297a014b
+modified: 1644436038479
+created: 1643218847352
+url: "{{ base_url }}/projects"
+name: 7 pass no label dir
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name": "Classification Example 2",
+      "data_dir": "/home/lin/pplabel/project_dir/data 2",
+      "description": "Example Project Descreption",
+      "other_settings": "{'multiclass_classification':true}",
+      "task_category_id": 1,
+    	"labels": [
+    		{
+    			"id": 1,
+    			"name": "person"
+    		},
+    		{
+    			"id": 2,
+    			"name": "cat"
+    		}
+    	]
+    }
+parameters: []
+headers:
+  - name: request_id
+    disabled: true
+    value: string
+    id: pair_a02b8ecbb9a2432c980cfe51be19a8fa
+  - name: Content-Type
+    value: application/json
+    id: pair_bee69f0a13cb4988a2aa588c51fdd797
+authentication: {}
+metaSortKey: 900
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

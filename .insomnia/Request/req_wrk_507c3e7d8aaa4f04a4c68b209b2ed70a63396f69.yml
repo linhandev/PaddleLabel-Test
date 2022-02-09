@@ -1,0 +1,34 @@
+_id: req_wrk_507c3e7d8aaa4f04a4c68b209b2ed70a63396f69
+type: Request
+parentId: fld_555e5023a08141bf8bd6239f48673667
+modified: 1644436038507
+created: 1643212565460
+url: "{{ base_url }}/tasks"
+name: Create a new task
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "project_id": 1,
+      "datas": ["data1.png"]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_5d4b60bdc4a142d2884cc2802badc50c
+  - id: pair_1ef0c4c0f7b4408aa7739eb437570b62
+    name: request_id
+    value: kljasdfjkldafslkj
+    description: ""
+authentication: {}
+metaSortKey: 0
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,27 @@
+_id: req_d89d2c76e2ce4902a7d9137dba00060d
+type: Request
+parentId: fld_1e806cb52ddf46088d49b4643b60da3f
+modified: 1644436038508
+created: 1643343011251
+url: "{{ base_url }}/tasks/:task_id"
+name: delete task and all data and annotations
+description: ""
+method: DELETE
+body: {}
+parameters:
+  - id: pair_7093f2f2cfbb4900b89e4e02b2d8dc7c
+    name: task_id
+    value: "2"
+    description: ""
+    type: text
+    multiline: false
+headers: []
+authentication: {}
+metaSortKey: 0
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
