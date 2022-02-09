@@ -1,9 +1,9 @@
 _id: req_1d416a7314a045f4a2d053250dfe223a
 type: Request
 parentId: fld_407d88ad4048445fa85cd633dc4f3386
-modified: 1644436038514
+modified: 1644442358052
 created: 1644436034163
-url: "{{ base_url }}/projects/:project_id"
+url: "{{ base_url }}/users/{% pathParam 'user_id', '1', '', true %}"
 name: 2 editing immutable
 description: ""
 method: PUT
@@ -11,17 +11,9 @@ body:
   mimeType: application/json
   text: |-
     	{
-    		"color": "newcolor",
-    		"comment": null,
-    		"id": 1,
-    		"name": "person",
-    		"project_id": 3
+    		"created": "2022-02-09T21:30:42.195995"
     	}
-parameters:
-  - id: pair_2226c51b202f4afcb3dbebf2a7a7cee1
-    name: project_id
-    value: "1"
-    description: ""
+parameters: []
 headers:
   - name: Content-Type
     value: application/json

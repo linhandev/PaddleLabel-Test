@@ -1,9 +1,9 @@
 _id: req_d400eed8f0994bc98ef98bdd2b9acdb0
 type: Request
 parentId: fld_407d88ad4048445fa85cd633dc4f3386
-modified: 1644436038514
+modified: 1644442409282
 created: 1644436034164
-url: "{{ base_url }}/labels/:label_id"
+url: "{{ base_url }}/users/{% pathParam 'user_id', '1', '', true %}"
 name: 3 edit one property
 description: ""
 method: PUT
@@ -11,13 +11,9 @@ body:
   mimeType: application/json
   text: |-
     {
-      "comment": "this is a new comment"
+    	"password": "new password"
     }
-parameters:
-  - id: pair_2226c51b202f4afcb3dbebf2a7a7cee1
-    name: label_id
-    value: "1"
-    description: ""
+parameters: []
 headers:
   - name: Content-Type
     value: application/json

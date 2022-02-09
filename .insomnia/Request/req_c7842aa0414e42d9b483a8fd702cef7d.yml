@@ -1,7 +1,7 @@
 _id: req_c7842aa0414e42d9b483a8fd702cef7d
 type: Request
 parentId: fld_7cce14d2ffdb4f33a5968afc87816b77
-modified: 1644438199015
+modified: 1644442286861
 created: 1644436034148
 url: "{{ base_url }}/users"
 name: 2 Invalid email
@@ -15,7 +15,7 @@ body:
     	"email": "melinhan.email",
     	"password": "asdfasdf",
     	"role_id": 0
-    }	
+    }
 parameters: []
 headers:
   - name: Content-Type
