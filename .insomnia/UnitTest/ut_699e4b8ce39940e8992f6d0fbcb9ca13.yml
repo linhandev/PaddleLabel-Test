@@ -1,0 +1,23 @@
+_id: ut_699e4b8ce39940e8992f6d0fbcb9ca13
+type: UnitTest
+parentId: uts_e4d230b946e34297b4cf2891946ba771
+modified: 1643366142654
+created: 1643365653719
+requestId: req_wrk_507c3e7d8aaa4f04a4c68b209b2ed70a2de3eb3a
+name: 1 create pj
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(201);
+  res = `{
+  	"created": "2022-01-28T10:24:50.378962",
+  	"data_dir": "/home/lin/pplabel/project_dir/data",
+  	"description": "Example Project Descreption",
+  	"label_config": "['class1', 'class2', 'class3']",
+  	"label_dir": "/home/lin/pplabel/project_dir/label",
+  	"modified": "2022-01-28T10:24:50.378968",
+  	"name": "Classification Example",
+  	"other_settings": "{'multiclass_classification':true}",
+  	"project_id": 1,
+  	"task_category": 1
+  }`
+  expect(response1.body == res)

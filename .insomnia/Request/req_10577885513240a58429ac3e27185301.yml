@@ -1,0 +1,54 @@
+_id: req_10577885513240a58429ac3e27185301
+type: Request
+parentId: fld_43f4285d1c73443b8070bd91297a014b
+modified: 1644436038479
+created: 1643463507782
+url: "{{ base_url }}/projects"
+name: 3 dup label id
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name": "Classification Example",
+      "data_dir": "/home/lin/pplabel/project_dir/data",
+      "description": "Example Project Descreption",
+      "label_dir": "/home/lin/pplabel/project_dir/label",
+      "other_settings": "{'some_property':true}",
+      "task_category_id": 1,
+    	"labels": [
+    		{
+    			"id": 1,
+    			"name": "person"
+    		},
+    		{
+    			"id": 1,
+    			"project_id": 1,
+    			"name": "cat"
+    		}
+    		
+    	]
+    }
+parameters: []
+headers:
+  - name: request_id
+    disabled: true
+    value: string
+    id: pair_a02b8ecbb9a2432c980cfe51be19a8fa
+  - name: Content-Type
+    value: application/json
+    id: pair_bee69f0a13cb4988a2aa588c51fdd797
+  - id: pair_6217ae9681b34c7c899b33ed2979a975
+    name: request_id
+    value: "123"
+    description: ""
+authentication: {}
+metaSortKey: 200
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

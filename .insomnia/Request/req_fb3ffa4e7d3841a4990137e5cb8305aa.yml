@@ -1,0 +1,25 @@
+_id: req_fb3ffa4e7d3841a4990137e5cb8305aa
+type: Request
+parentId: fld_19d8984474fd4e9c91275b1452b655ea
+modified: 1644436038513
+created: 1643682423559
+url: "{{ base_url }}/tags/:tag_id"
+name: 2 get one tag
+description: ""
+method: GET
+body: {}
+parameters:
+  - id: pair_1266f4ff01874c0cbc08b675d7bc17d5
+    name: tag_id
+    value: "1"
+    description: ""
+headers: []
+authentication: {}
+metaSortKey: 100
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,21 @@
+_id: req_wrk_507c3e7d8aaa4f04a4c68b209b2ed70aa9cca752
+type: Request
+parentId: fld_1ca73d2167ac46d5817a1bb73e187920
+modified: 1644438687614
+created: 1643212565470
+url: "{{ base_url }}/projects/{% pathParam 'project_id', '1', '', true %}"
+name: 2 get one
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: 100
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

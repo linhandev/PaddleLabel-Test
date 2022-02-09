@@ -1,0 +1,25 @@
+_id: req_0621ac56aa9e453eaa676fb841485056
+type: Request
+parentId: wrk_507c3e7d8aaa4f04a4c68b209b2ed70a
+modified: 1644436038457
+created: 1643366629659
+url: "{{ base_url }}/projects/:ProjectId"
+name: 0 CamelCase
+description: ""
+method: GET
+body: {}
+parameters:
+  - id: pair_c55a2ccb75a64149849612d9d3915d2b
+    name: ProjectId
+    value: "1"
+    description: ""
+headers: []
+authentication: {}
+metaSortKey: 0
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

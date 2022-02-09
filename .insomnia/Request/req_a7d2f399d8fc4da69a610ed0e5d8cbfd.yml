@@ -1,0 +1,30 @@
+_id: req_a7d2f399d8fc4da69a610ed0e5d8cbfd
+type: Request
+parentId: fld_51aaca4ab9044d839e598dfa69515848
+modified: 1644436038512
+created: 1643696715935
+url: "{{ base_url }}/datas/:data_id/image"
+name: 1 get image
+description: ""
+method: GET
+body:
+  mimeType: application/json
+  text: "{}"
+parameters:
+  - id: pair_f156ec4c67ad4089b4ae2d39d1f109ea
+    name: data_id
+    value: "1"
+    description: ""
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_472fd4580e944066ba16b7abc45f8030
+authentication: {}
+metaSortKey: 0
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,21 @@
+_id: req_e7e61d73e9574562a1a07db813938cca
+type: Request
+parentId: fld_8e002783d5cc408f8893bcd1f4df1e4c
+modified: 1644436038506
+created: 1643458198520
+url: "{{ base_url }}/labels"
+name: 1 get all labels
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: 0
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

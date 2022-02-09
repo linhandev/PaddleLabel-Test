@@ -1,0 +1,25 @@
+_id: req_160601cc3a734f08a8aa988b29c44eb0
+type: Request
+parentId: fld_ef400b00658a489c9cd5b50b5f5a8074
+modified: 1644436038485
+created: 1643681010993
+url: "{{ base_url }}/projects/:project_id/annotations"
+name: 4 Get all annotations
+description: ""
+method: GET
+body: {}
+parameters:
+  - id: pair_68aba020a11e4df18018a61127ece0e8
+    name: project_id
+    value: "1"
+    description: ""
+headers: []
+authentication: {}
+metaSortKey: 300
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

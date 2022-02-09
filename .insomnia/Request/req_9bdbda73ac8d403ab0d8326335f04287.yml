@@ -1,0 +1,25 @@
+_id: req_9bdbda73ac8d403ab0d8326335f04287
+type: Request
+parentId: fld_0133330ef830412da0187f0e68b643f5
+modified: 1644436038512
+created: 1643458240553
+url: "{{ base_url }}/annotations/:annotation_id"
+name: 2 get one annotation
+description: ""
+method: GET
+body: {}
+parameters:
+  - id: pair_1266f4ff01874c0cbc08b675d7bc17d5
+    name: annotation_id
+    value: "1"
+    description: ""
+headers: []
+authentication: {}
+metaSortKey: 100
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

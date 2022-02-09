@@ -1,0 +1,36 @@
+_id: req_b19e81a806064411a29be5ae679be25e
+type: Request
+parentId: fld_1240d0af2bf143379d30589dd969a00e
+modified: 1644436038506
+created: 1643463011504
+url: "{{ base_url }}/labels"
+name: 2 Dup id
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "project_id": 1,
+    	"id": 1,
+    	"name": "fish",
+    	"comment": "Label for preson"
+    }	
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_5d4b60bdc4a142d2884cc2802badc50c
+  - id: pair_1ef0c4c0f7b4408aa7739eb437570b62
+    name: request_id
+    value: asdfasdf
+    description: ""
+authentication: {}
+metaSortKey: 100
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,34 @@
+_id: req_c70870e9d7ee4c7885640613b27e4cd5
+type: Request
+parentId: fld_9cfc077b95bc420aa8d813aed431503f
+modified: 1644436038512
+created: 1643458240559
+url: "{{ base_url }}/annotations/:annotation_id"
+name: 1 Edit all info
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    	{
+    		"label_id": 2,
+    		"result": null
+    	}
+parameters:
+  - id: pair_2226c51b202f4afcb3dbebf2a7a7cee1
+    name: annotation_id
+    value: "1"
+    description: ""
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_e7b362ca417d46e8bd47cff292b9b27e
+authentication: {}
+metaSortKey: 0
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

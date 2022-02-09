@@ -1,0 +1,29 @@
+_id: req_7d2c0eebd1c241839947ca7288b83cf1
+type: Request
+parentId: fld_a8c8cc3b31fc4ec8b4c8195d4779db0d
+modified: 1644438819614
+created: 1643285667110
+url: "{{ base_url }}/projects/{% pathParam 'project_id', '1', '', true %}"
+name: 3 Edit one property
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "data_dir": "/home/lin/pplabel/new_datadir"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_e7b362ca417d46e8bd47cff292b9b27e
+authentication: {}
+metaSortKey: 200
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

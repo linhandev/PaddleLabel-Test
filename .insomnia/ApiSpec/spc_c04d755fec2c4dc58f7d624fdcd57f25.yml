@@ -1,0 +1,312 @@
+_id: spc_c04d755fec2c4dc58f7d624fdcd57f25
+type: ApiSpec
+parentId: wrk_507c3e7d8aaa4f04a4c68b209b2ed70a
+modified: 1644434698854
+created: 1643212565481
+fileName: PP-Label api spec 0.1.0
+contents: >
+  openapi: 3.0.0
+
+  info:
+    title: PP-Label api spec
+    version: 0.1.0
+    description: ''
+  servers:
+    - url: 'http://localhost:5000/api'
+      description: Local server
+  paths:
+    /projects:
+      get:
+        tags:
+          - Project
+        summary: 'Read all projects, sort by last modify date'
+        responses:
+          '200':
+            description: success
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Projects'
+      post:
+        tags:
+          - Project
+        summary: Create a new project
+        requestBody:
+          required: true
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Project'
+              examples:
+                Classfication Example:
+                  value:
+                    name: Classification Example
+                    description: Example Project Descreption
+                    task_category: 1
+                    data_dir: ~/pplabel/project_dir/data
+                    label_dir: ~/pplabel/project_dir/label
+                    label_config: '[''class1'', ''class2'', ''class3'']'
+                    other_settings: '{''multiclass_classification'':true}'
+        responses:
+          '201':
+            description: success
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Project'
+                examples:
+                  example-1:
+                    value:
+                      project_id: 0
+                      name: Example Project
+                      description: Example Descreption
+                      task_category: 1
+                      data_dir: ~/pplabel/project_dir/data
+                      label_dir: ~/pplabel/project_dir/label
+                      label_config: string
+                      created: string
+                      modified: string
+                      other_settings: string
+        parameters:
+          - schema:
+              type: string
+            in: header
+            name: request_id
+            description: 'Assign a unique random value each run, server will reject requests with duplicate request_id within several seconds. Prevent critical operations from running multiple times'
+    '/projects/{project_id}':
+      get:
+        tags:
+          - Project
+        summary: Get info of a specific project
+        parameters:
+          - name: project_id
+            in: path
+            description: Id of the project
+            schema:
+              type: integer
+            required: true
+        responses:
+          '200':
+            description: OK
+          '404':
+            description: Project not fond
+      delete:
+        summary: Delete a project record and ALL TASKS RECORDS under the project.
+        description: Delete a project record and ALL TASKS RECORDS under the project. Won't delete file on file system
+        tags:
+          - Project
+        parameters:
+          - name: project_id
+            in: path
+            description: Id of the project to delete
+            schema:
+              type: integer
+            required: true
+        responses:
+          '200':
+            description: OK
+          '404':
+            description: The task specified is not found
+      put:
+        tags:
+          - Project
+        summary: Edit project info
+        description: Edit project info. Provide key value pair to change one value only. Provide all changed values to change multiple. Empty string will be set. Leave values don't intend to change out of request body.
+        parameters:
+          - name: project_id
+            in: path
+            description: Id of the project to edit
+            schema:
+              type: integer
+            required: true
+        requestBody:
+          required: true
+          content:
+            application/json:
+              schema:
+                anyOf:
+                  - $ref: '#/components/schemas/Project'
+                  - $ref: '#/components/schemas/KeyValuePair'
+              examples:
+                Full Project:
+                  value:
+                    name: Change All Info
+                    description: Example Project Descreption
+                    task_category: 1
+                    data_dir: ~/pplabel/project_dir/data
+                    label_dir: ~/pplabel/project_dir/label
+                    label_config: '[''class1'', ''class2'', ''class3'']'
+                    other_settings: '{''multiclass_classification'':true}'
+                One Property:
+                  value:
+                    name: Change Only Project Name
+        responses:
+          '200':
+            description: success
+          '404':
+            description: 'project with project id not fond, or project don''t have requested property'
+    /tasks:
+      get:
+        tags:
+          - Task
+        summary: 'Get all tasks, sort by last modified'
+        responses:
+          '200':
+            description: success
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Projects'
+      post:
+        tags:
+          - Task
+        summary: Create a new task
+        requestBody:
+          required: true
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Task'
+              examples:
+                Task Example:
+                  value:
+                    project_id: 1
+                    data_paths:
+                      - image.png
+                    label_paths:
+                      - image_png.xml
+                    slice_count: 1
+        responses:
+          '201':
+            description: success
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Task'
+                examples:
+                  example-1:
+                    value:
+                      project_id: 0
+                      data_paths:
+                        - image.png
+                      label_paths:
+                        - image_png.xml
+                      slice_count: 1
+  components:
+    schemas:
+      Project:
+        type: object
+        description: Contains project details and settings
+        x-examples:
+          Classification_Example:
+            project_id: null
+            name: Classification Example
+            description: Example Project Descreption
+            task_category: 1
+            data_dir: ~/pplabel/project_name/data
+            label_dir: ~/pplabel/project_name/label
+            label_config: '[''class1'', ''class2'', ''class3'']'
+            created: null
+            modified: null
+            other_settings: '{''multiclass_classification'':true}'
+        properties:
+          project_id:
+            type: integer
+            nullable: true
+            readOnly: true
+          name:
+            type: string
+            maxLength: 64
+            description: Project name
+          description:
+            type: string
+            description: Optional project description
+            nullable: true
+          task_category:
+            type: integer
+            maximum: 64
+            description: 'Top level annotation task category, see TODO for int <-> category map'
+          data_dir:
+            type: string
+            description: Absolute directory path where all the data file is stored
+          label_dir:
+            type: string
+            description: Absolute directory path where all the label files are stored
+          label_config:
+            type: string
+            description: Label configuration. Varies across different task categories
+          created:
+            type: string
+            description: Project creation timestamp in UTC
+            format: timestamp
+            nullable: true
+            readOnly: true
+          modified:
+            type: string
+            description: Last time the project detail or ANY TASK of the project is modified
+            format: timestamp
+            nullable: true
+            readOnly: true
+          other_settings:
+            type: string
+            description: Project settings that are different across annotation task categories
+        required:
+          - name
+          - task_category
+          - data_dir
+      Projects:
+        type: array
+        items:
+          type: object
+          properties:
+            project_id:
+              type: integer
+              description: Id of the person
+              nullable: true
+            name:
+              type: string
+              maxLength: 32
+            '':
+              type: string
+      Task:
+        title: Task
+        type: object
+        description: 'An annotation task, groups data and label together'
+        properties:
+          task_id:
+            type: integer
+            readOnly: true
+          project_id:
+            type: integer
+          data_path:
+            type: string
+          slice_count:
+            type: integer
+          created:
+            type: string
+            format: timestamp
+            readOnly: true
+          modified:
+            type: string
+            format: timestamp
+            readOnly: true
+        required:
+          - project_id
+      Annotation:
+        title: Annotation
+        type: object
+        properties:
+          annotation_id:
+            type: integer
+            nullable: true
+          created:
+            type: string
+          modified:
+            type: string
+          type:
+            type: string
+          json:
+            type: string
+      KeyValuePair:
+        description: A key-value pair
+contentType: yaml
