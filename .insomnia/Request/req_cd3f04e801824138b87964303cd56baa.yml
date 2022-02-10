@@ -1,18 +1,14 @@
 _id: req_cd3f04e801824138b87964303cd56baa
 type: Request
 parentId: fld_ef400b00658a489c9cd5b50b5f5a8074
-modified: 1643696706989
+modified: 1644464451720
 created: 1643456277187
-url: "{{ base_url }}/projects/:project_id/tasks"
+url: "{{ base_url }}/projects/{% pathParam 'project_id', '1', '', true %}/tasks"
 name: 2 Get all tasks
 description: ""
 method: GET
 body: {}
-parameters:
-  - id: pair_68aba020a11e4df18018a61127ece0e8
-    name: project_id
-    value: "1"
-    description: ""
+parameters: []
 headers: []
 authentication: {}
 metaSortKey: 100
