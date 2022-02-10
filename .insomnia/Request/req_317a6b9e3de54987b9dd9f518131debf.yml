@@ -1,9 +1,9 @@
 _id: req_317a6b9e3de54987b9dd9f518131debf
 type: Request
 parentId: fld_a8c8cc3b31fc4ec8b4c8195d4779db0d
-modified: 1644439045507
+modified: 1644435692732
 created: 1643219538057
-url: "{{ base_url }}/projects/{% pathParam 'project_id', '1', '', true %}"
+url: "{{ base_url }}/projects/:project_id"
 name: 2 Edit immutable
 description: ""
 method: PUT
@@ -18,7 +18,11 @@ body:
       "other_settings": "{'multiclass_classification':true}",
       "task_category_id": 10
     }
-parameters: []
+parameters:
+  - id: pair_2226c51b202f4afcb3dbebf2a7a7cee1
+    name: project_id
+    value: "1"
+    description: ""
 headers:
   - name: Content-Type
     value: application/json
