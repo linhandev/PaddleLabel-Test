@@ -1,9 +1,9 @@
 _id: req_wrk_507c3e7d8aaa4f04a4c68b209b2ed70a68b29b6a
 type: Request
 parentId: fld_612fc02c00ed485a9b705934793a6681
-modified: 1643696706991
+modified: 1644464890069
 created: 1643212565468
-url: "{{ base_url }}/projects/{{ project_id }}"
+url: "{{ base_url }}/projects/:project_id"
 name: delete pj and all task records
 description: ""
 method: DELETE
