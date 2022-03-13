@@ -1,6 +1,6 @@
 _type: export
 __export_format: 4
-__export_date: 2022-02-01T06:33:32.582Z
+__export_date: 2022-03-13T05:04:08.618Z
 __export_source: insomnia.desktop.app:v2021.7.2
 resources:
   - _id: req_0621ac56aa9e453eaa676fb841485056
@@ -38,7 +38,7 @@ resources:
     _type: workspace
   - _id: req_wrk_507c3e7d8aaa4f04a4c68b209b2ed70a2de3eb3a
     parentId: fld_43f4285d1c73443b8070bd91297a014b
-    modified: 1643696706980
+    modified: 1647147705648
     created: 1643212565472
     url: "{{ base_url }}/projects"
     name: 1 classification
@@ -483,7 +483,7 @@ resources:
     _type: request
   - _id: req_e738e17160044fd58329b03487d5f9b1
     parentId: fld_43f4285d1c73443b8070bd91297a014b
-    modified: 1643696706980
+    modified: 1646740909140
     created: 1643451029729
     url: "{{ base_url }}/projects"
     name: 2 detection
@@ -537,7 +537,7 @@ resources:
     _type: request
   - _id: req_10577885513240a58429ac3e27185301
     parentId: fld_43f4285d1c73443b8070bd91297a014b
-    modified: 1643696706980
+    modified: 1646740909822
     created: 1643463507782
     url: "{{ base_url }}/projects"
     name: 3 dup label id
@@ -648,7 +648,7 @@ resources:
     parentId: fld_612fc02c00ed485a9b705934793a6681
     modified: 1643696706991
     created: 1643212565468
-    url: "{{ base_url }}/projects/:project_id"
+    url: "{{ base_url }}/projects/{{ project_id }}"
     name: delete pj and all task records
     description: ""
     method: DELETE
@@ -683,7 +683,7 @@ resources:
     _type: request_group
   - _id: req_wrk_507c3e7d8aaa4f04a4c68b209b2ed70a590a5c8b
     parentId: fld_a8c8cc3b31fc4ec8b4c8195d4779db0d
-    modified: 1643696706988
+    modified: 1646741009027
     created: 1643212565466
     url: "{{ base_url }}/projects/:project_id"
     name: 1 Edit all project info
@@ -730,7 +730,7 @@ resources:
     _type: request_group
   - _id: req_317a6b9e3de54987b9dd9f518131debf
     parentId: fld_a8c8cc3b31fc4ec8b4c8195d4779db0d
-    modified: 1643696706988
+    modified: 1646741003375
     created: 1643219538057
     url: "{{ base_url }}/projects/:project_id"
     name: 2 Edit immutable
@@ -803,7 +803,7 @@ resources:
     parentId: fld_1ca73d2167ac46d5817a1bb73e187920
     modified: 1643696706982
     created: 1643212565470
-    url: "{{ base_url }}/projects/:project_id"
+    url: "{{ base_url }}/projects/{{ project_id }}"
     name: 2 get one
     description: ""
     method: GET
@@ -992,7 +992,7 @@ resources:
     _type: request
   - _id: req_wrk_507c3e7d8aaa4f04a4c68b209b2ed70a63396f69
     parentId: fld_555e5023a08141bf8bd6239f48673667
-    modified: 1643696707011
+    modified: 1646743871281
     created: 1643212565460
     url: "{{ base_url }}/tasks"
     name: Create a new task
@@ -1826,7 +1826,7 @@ resources:
     _type: request
   - _id: req_eb7ad0e6983642179e85a635b601c963
     parentId: fld_b7c15c13e2b94b659bc7d2632610e082
-    modified: 1643696707018
+    modified: 1646743877721
     created: 1643458240543
     url: "{{ base_url }}/annotations"
     name: Create a new annotation
@@ -2870,23 +2870,32 @@ resources:
     _type: environment
   - _id: jar_0708fec005c0a2e197345e3cce62eac13f2cacba
     parentId: wrk_507c3e7d8aaa4f04a4c68b209b2ed70a
-    modified: 1643691023690
+    modified: 1647147706498
     created: 1643212573002
     name: Default Jar
     cookies:
       - key: session
-        value: eyJyZXF1ZXN0X2lkcyI6W3siIHQiOlsxNjQzNjkxMDIzLjY3NTMxMjgsImtsamFzZGZrYWRmc2tsbmxraiJdfV19.Yfi8Dw.jSsmrPbea-scethImV_VtvZSYCs
+        value: eyJyZXF1ZXN0X2lkcyI6W3siIHQiOlsxNjQ3MTQzMDU4LjY4NjU0MiwiMTIzIl19XX0.Yi1okg.OMMIQHBpZ79zqvag_LaRkY0e1Mw
         domain: localhost
         path: /
         httpOnly: true
         hostOnly: true
         creation: 2022-01-27T12:21:37.790Z
-        lastAccessed: 2022-02-01T04:50:23.690Z
-        id: "10289635718098022"
+        lastAccessed: 2022-03-13T03:44:18.704Z
+        id: "587425529917561"
+      - key: session
+        value: eyJyZXF1ZXN0X2lkcyI6W3siIHQiOlsxNjQ3MTQ3NjkyLjg5ODkxNTUsIjEyMyJdfV19.Yi16rA.gvvxnwPHebOnSKvlhZAnSMssi7I
+        domain: pplabel.herokuapp.com
+        path: /
+        httpOnly: true
+        hostOnly: true
+        creation: 2022-03-13T05:01:46.497Z
+        lastAccessed: 2022-03-13T05:01:46.497Z
+        id: "07373241944802289"
     _type: cookie_jar
   - _id: spc_c04d755fec2c4dc58f7d624fdcd57f25
     parentId: wrk_507c3e7d8aaa4f04a4c68b209b2ed70a
-    modified: 1643359282403
+    modified: 1646740667665
     created: 1643212565481
     fileName: PP-Label api spec 0.1.0
     contents: >
@@ -3204,9 +3213,9 @@ resources:
     _type: unit_test_suite
   - _id: env_env_0708fec005c0a2e197345e3cce62eac13f2cacba_sub
     parentId: env_0708fec005c0a2e197345e3cce62eac13f2cacba
-    modified: 1643215986613
+    modified: 1647143152049
     created: 1643212565476
-    name: OpenAPI env
+    name: local
     data:
       scheme: http
       base_path: /api
@@ -3219,6 +3228,24 @@ resources:
     color: null
     isPrivate: false
     metaSortKey: 1643212565476
+    _type: environment
+  - _id: env_ea1a23ceaa974408898d39b2ba843aac
+    parentId: env_0708fec005c0a2e197345e3cce62eac13f2cacba
+    modified: 1647146033951
+    created: 1647143120473
+    name: heroku
+    data:
+      scheme: http
+      base_path: /api
+      host: pplabel.herokuapp.com
+    dataPropertyOrder:
+      "&":
+        - scheme
+        - base_path
+        - host
+    color: null
+    isPrivate: false
+    metaSortKey: 1647143120473
     _type: environment
   - _id: ut_699e4b8ce39940e8992f6d0fbcb9ca13
     parentId: uts_e4d230b946e34297b4cf2891946ba771
