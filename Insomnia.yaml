@@ -1,6 +1,6 @@
 _type: export
 __export_format: 4
-__export_date: 2022-03-13T05:04:08.618Z
+__export_date: 2022-03-13T06:15:11.366Z
 __export_source: insomnia.desktop.app:v2021.7.2
 resources:
   - _id: req_0621ac56aa9e453eaa676fb841485056
@@ -38,7 +38,7 @@ resources:
     _type: workspace
   - _id: req_wrk_507c3e7d8aaa4f04a4c68b209b2ed70a2de3eb3a
     parentId: fld_43f4285d1c73443b8070bd91297a014b
-    modified: 1647147705648
+    modified: 1647151181783
     created: 1643212565472
     url: "{{ base_url }}/projects"
     name: 1 classification
@@ -52,7 +52,7 @@ resources:
           "data_dir": "/home/lin/Desktop/data/pplabel/single_clas_toy/PetImages/",
           "description": "Example Project Descreption",
           "label_dir": "",
-          "other_settings": "{'some_property':true}",
+          "other_settings": "{'single_class': true}",
           "task_category_id": 1,
         	"labels": [
         		{
@@ -483,7 +483,7 @@ resources:
     _type: request
   - _id: req_e738e17160044fd58329b03487d5f9b1
     parentId: fld_43f4285d1c73443b8070bd91297a014b
-    modified: 1646740909140
+    modified: 1647151183938
     created: 1643451029729
     url: "{{ base_url }}/projects"
     name: 2 detection
@@ -636,6 +636,48 @@ resources:
         description: ""
     authentication: {}
     metaSortKey: 300
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_18c179765e0a4a29bb5c6e332e64bc89
+    parentId: fld_43f4285d1c73443b8070bd91297a014b
+    modified: 1647151196206
+    created: 1647150894046
+    url: "{{ base_url }}/projects"
+    name: 2 key point
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Keypoint Example",
+          "data_dir": "/home/lin/pplabel/project_dir/keypoint",
+          "description": "Example Project Descreption",
+          "label_dir": "/home/lin/pplabel/project_dir/keypoint",
+          "other_settings": "{'max_point': 10}",
+          "task_category_id": 2
+        }
+    parameters: []
+    headers:
+      - name: request_id
+        disabled: true
+        value: string
+        id: pair_a02b8ecbb9a2432c980cfe51be19a8fa
+      - name: Content-Type
+        value: application/json
+        id: pair_bee69f0a13cb4988a2aa588c51fdd797
+      - id: pair_6217ae9681b34c7c899b33ed2979a975
+        name: request_id
+        value: wqeasdf
+        description: ""
+    authentication: {}
+    metaSortKey: 150
     isPrivate: false
     settingStoreCookies: true
     settingSendCookies: true
@@ -801,9 +843,9 @@ resources:
     _type: request
   - _id: req_wrk_507c3e7d8aaa4f04a4c68b209b2ed70aa9cca752
     parentId: fld_1ca73d2167ac46d5817a1bb73e187920
-    modified: 1643696706982
+    modified: 1647149590703
     created: 1643212565470
-    url: "{{ base_url }}/projects/{{ project_id }}"
+    url: "{{ base_url }}/projects/:project_id"
     name: 2 get one
     description: ""
     method: GET
@@ -2870,7 +2912,7 @@ resources:
     _type: environment
   - _id: jar_0708fec005c0a2e197345e3cce62eac13f2cacba
     parentId: wrk_507c3e7d8aaa4f04a4c68b209b2ed70a
-    modified: 1647147706498
+    modified: 1647151197026
     created: 1643212573002
     name: Default Jar
     cookies:
@@ -2882,16 +2924,16 @@ resources:
         hostOnly: true
         creation: 2022-01-27T12:21:37.790Z
         lastAccessed: 2022-03-13T03:44:18.704Z
-        id: "587425529917561"
+        id: "22436184188066943"
       - key: session
-        value: eyJyZXF1ZXN0X2lkcyI6W3siIHQiOlsxNjQ3MTQ3NjkyLjg5ODkxNTUsIjEyMyJdfV19.Yi16rA.gvvxnwPHebOnSKvlhZAnSMssi7I
+        value: eyJyZXF1ZXN0X2lkcyI6W3siIHQiOlsxNjQ3MTUxMTgzLjQ0ODMyMiwid3FlYXNkZiJdfV19.Yi2ITw.7240Ekl8uqOStptbbQeOadjvSco
         domain: pplabel.herokuapp.com
         path: /
         httpOnly: true
         hostOnly: true
         creation: 2022-03-13T05:01:46.497Z
-        lastAccessed: 2022-03-13T05:01:46.497Z
-        id: "07373241944802289"
+        lastAccessed: 2022-03-13T05:59:57.026Z
+        id: "04705845719263335"
     _type: cookie_jar
   - _id: spc_c04d755fec2c4dc58f7d624fdcd57f25
     parentId: wrk_507c3e7d8aaa4f04a4c68b209b2ed70a
@@ -3213,13 +3255,13 @@ resources:
     _type: unit_test_suite
   - _id: env_env_0708fec005c0a2e197345e3cce62eac13f2cacba_sub
     parentId: env_0708fec005c0a2e197345e3cce62eac13f2cacba
-    modified: 1647143152049
+    modified: 1647149615152
     created: 1643212565476
     name: local
     data:
       scheme: http
       base_path: /api
-      host: localhost:5000
+      host: localhost:17995
     dataPropertyOrder:
       "&":
         - scheme
